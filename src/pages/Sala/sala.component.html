@@ -1,0 +1,73 @@
+<ion-menu side="start" menuId="first" contentId="main" [swipeGesture]="true">
+    <ion-header>
+      <ion-toolbar color="orange-duoc" >
+        <ion-title >Duoc Maps</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item color="light"href="/"><ion-icon name="home-outline"></ion-icon> Inicio</ion-item>
+        <ion-item color="light" (click)="pop2click($event)"><ion-icon name="map-outline"></ion-icon> Mapa</ion-item>
+        <ion-item color="light"href="calendario"><ion-icon name="calendar-number-outline"></ion-icon> Calendario</ion-item>
+        <ion-item color="light"href="puntoInteres"><ion-icon name="location-outline"></ion-icon> Puntos de Interes</ion-item>
+        <ion-item color="light"href="Sala"><ion-icon name="school-outline"></ion-icon> Salas</ion-item>
+      </ion-list>
+    </ion-content>  
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
+  
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Sala</ion-title>
+      <ion-buttons slot="start">
+          <ion-menu-button menu="first"></ion-menu-button>
+      </ion-buttons>
+  
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-searchbar (ionInput)="filterSalas($event)" show-clear-button="focus" placeholder="Buscar Sala"></ion-searchbar>
+
+    <ion-card>
+        <ion-card-header class="ion-text-center">
+          <ion-card-title>Piso 1</ion-card-title>
+        </ion-card-header>
+    </ion-card>
+    <ion-grid [fixed]="true">
+      <ion-row>
+        <ion-col class="ion-text-center">
+            <ion-row>
+              <ion-col class="ion-text-center" *ngFor="let sala of filtroSala1">
+                <ion-button color="light">
+                  {{ sala }}
+                </ion-button>
+              </ion-col>
+            </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-card>
+      <ion-card-header class="ion-text-center">
+        <ion-card-title>Piso 2</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+    <ion-grid [fixed]="true">
+      <ion-row>
+        <ion-col class="ion-text-center">
+            <ion-row>
+              <ion-col class="ion-text-center" *ngFor="let sala of filtroSala2">
+                <ion-button color="light">
+                  {{ sala }}
+                </ion-button>
+              </ion-col>
+            </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+
+  
+  
+    
