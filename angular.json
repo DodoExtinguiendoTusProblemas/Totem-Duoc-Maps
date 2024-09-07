@@ -31,6 +31,9 @@
                 "output": "./svg"
               }
             ],
+            "allowedCommonJsDependencies": [
+                "ion2-calendar"
+              ],
             "styles": ["src/theme/variables.scss", "src/global.scss"],
             "scripts": [],
             "aot": false,
@@ -171,6 +174,7 @@
     }
   },
   "cli": {
+    "analytics": "693d0373-2a4e-4dd6-9577-672044e43014",
     "defaultCollection": "@ionic/angular-toolkit"
   },
   "schematics": {
