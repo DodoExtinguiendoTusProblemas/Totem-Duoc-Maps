@@ -58,7 +58,6 @@ import { PreguntasComponent } from 'src/pages/preguntas/preguntas.component';
      PreguntasComponent],
   entryComponents: [],
   imports: [
-    IonicModule,
     BrowserModule, 
     IonicModule.forRoot(), 
     AppRoutingModule, 
