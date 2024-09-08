@@ -30,6 +30,12 @@ Here're some of the project's best features:
 ```
 npm install
 ```
+<p>2.1. Dependencia Adicional</p>
+
+```
+npm install @ionic/angular@5.9.4
+
+```
 
 <p>3. Ejecutar proyecto</p>
 
