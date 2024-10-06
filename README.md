@@ -1,6 +1,6 @@
 <h1 align="center" id="title">Totem Duoc Maps</h1>
 
-<p align="center"><img src="https://drive.google.com/file/d/1b3hcyag0BIfxZZvt6pjtYTf4nD24cLnN/view?usp=drive_link" alt="project-image"></p>
+<p align="center"><img src="https://duocmaps.s3.amazonaws.com/www/assets/img/duoc.png" alt="project-image"></p>
 
 <p id="description">*brindar apoyo a las personas que requieran encontrar una sala o un punto de interés específico dentro de la institución permitiéndoles visualizar la ubicación exacta de los mismos.</p>
 
@@ -29,6 +29,12 @@ Here're some of the project's best features:
 
 ```
 npm install
+```
+<p>2.1. Dependencia Adicional</p>
+
+```
+npm install @ionic/angular@5.9.4
+
 ```
 
 <p>3. Ejecutar proyecto</p>

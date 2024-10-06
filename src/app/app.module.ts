@@ -37,6 +37,7 @@ import { CalendarComponent } from 'src/pages/calendar/calendar.component';
 import { CalendarModule } from 'ion2-calendar';
 import { SalaComponent } from 'src/pages/Sala/sala.component';
 import { PreguntasComponent } from 'src/pages/preguntas/preguntas.component';
+import { Popover2Component } from 'src/pages/popover2/popover2.component';
 
 
 
@@ -49,13 +50,13 @@ import { PreguntasComponent } from 'src/pages/preguntas/preguntas.component';
      FoodPlaceComponent,
      BibliotecaComponent,
      EnfermeriaComponent,
+     Popover2Component,
      FinanzasComponent,
      PuntoEstudiantilComponent,
      CalendarComponent,
      PreguntasComponent],
   entryComponents: [],
   imports: [
-    IonicModule,
     BrowserModule, 
     IonicModule.forRoot(), 
     AppRoutingModule, 
