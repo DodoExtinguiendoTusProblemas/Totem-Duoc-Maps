@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { PopoverController } from "@ionic/angular";
 import { Popover2Component } from "../popover2/popover2.component";
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
     selector: 'main',
@@ -10,7 +11,11 @@ import { Popover2Component } from "../popover2/popover2.component";
 export class MainComponent{
     
     
-    constructor(public popoverController: PopoverController){}
+    constructor(private inAppBrowser: InAppBrowser){}
+
+    redirect() {
+        this.inAppBrowser.create("https://tour-br.metareal.com/apps/player?asset=4b885b33-87cd-4a0f-8dc3-c1ca84f18653","_self", "location=no");
+    }
 
     option = {
 
@@ -18,14 +23,6 @@ export class MainComponent{
         centeredSlides: true,
         loop:true,
         spaceBetween:10
-    }
-
-    async pop2click(event){
-        const popover = await this.popoverController.create({
-            component: Popover2Component,
-            event
-        });
-        return await popover.present();
     }
 
 

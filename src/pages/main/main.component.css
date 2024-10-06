@@ -24,3 +24,47 @@ ion-card img {
 .swiper-slide{
     transition: 400ms all ease-in-out;
 }
+.confBtn{
+    height: 54px;
+    font-size: x-large;
+}
+
+.textStyles{
+    font-size: xx-large;
+}
+
+.img-footer-style{
+    width: 190px; 
+    margin-right: 20px;
+}
+.footer-list{
+    text-align: center; 
+    font-size: xx-large
+}
+
+.icon-style {
+    margin-top: 213px; 
+    font-size: 3.5rem;
+    position: absolute; 
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 34px;
+}
+
+.footer-info {
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    flex-direction: row;
+}
+
+.lateral-menu{
+    max-height: 100px;
+    font-size: x-large;
+}

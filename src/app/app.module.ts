@@ -32,8 +32,6 @@ import { AngularFireStorageModule } from '@angular/fire//compat/storage';
 import { environment } from '../environments/environment.prod';
 
 //AUTH GUARD
-import { Iframemenos1Component } from 'src/pages/iframe/iframemenos1/iframemenos1.component';
-
 import { InAppBrowser} from '@ionic-native/in-app-browser/ngx';
 import { CalendarComponent } from 'src/pages/calendar/calendar.component';
 import { CalendarModule } from 'ion2-calendar';
@@ -53,7 +51,6 @@ import { PreguntasComponent } from 'src/pages/preguntas/preguntas.component';
      EnfermeriaComponent,
      FinanzasComponent,
      PuntoEstudiantilComponent,
-     Iframemenos1Component,
      CalendarComponent,
      PreguntasComponent],
   entryComponents: [],

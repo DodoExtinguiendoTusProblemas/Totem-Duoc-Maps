@@ -5,13 +5,11 @@
       </ion-toolbar>
     </ion-header>
     <ion-content>
-      <ion-list>
-        <ion-item color="light"href="/"><ion-icon name="home-outline"></ion-icon> Inicio</ion-item>
-        <ion-item color="light" (click)="pop2click($event)"><ion-icon name="map-outline"></ion-icon> Mapa</ion-item>
-        <ion-item color="light"href="calendario"><ion-icon name="calendar-number-outline"></ion-icon> Calendario</ion-item>
-        <ion-item color="light"href="puntoInteres"><ion-icon name="location-outline"></ion-icon> Puntos de Interes</ion-item>
-        <ion-item color="light"href="Sala"><ion-icon name="school-outline"></ion-icon> Salas</ion-item>
-      </ion-list>
+        <ion-list>
+          <ion-item color="light"href="calendario" class="lateral-menu"><ion-icon name="calendar-number-outline"></ion-icon> Calendario</ion-item>
+          <ion-item color="light"href="Consejero" class="lateral-menu"><ion-icon name="school-outline"></ion-icon>Consejero</ion-item>
+          <ion-item color="light"href="Sala" class="lateral-menu"><ion-icon name="construct-outline"></ion-icon>Ajuste</ion-item>
+        </ion-list>
     </ion-content>  
   </ion-menu>
   <ion-router-outlet id="main"></ion-router-outlet>
@@ -30,57 +28,100 @@
 <ion-content >
     <ion-slides [options]="option" class="ion-margin-top">
 
-        <ion-slide class="imgSlide">
-            <ion-card>
-                <a href="Biblioteca">
-                    <img src="assets/img/Biblioteca.jpg">
-                </a>
-            </ion-card>
-        </ion-slide>
-
         <ion-slide>
-            <ion-card>
-                <a href="Enfermeria">
-                    <img src="assets/img/Enfermeria.jpg">
-                </a>
-            </ion-card>
+            <ion-img
+                src="/assets/mapaPisos/Piso-1.png"
+                alt="Mapa Piso 1"
+                style="width: 100%; height: auto; cursor: pointer;"
+                (click)="redirect()"
+            >
+            </ion-img>
+        </ion-slide>
+        <ion-slide>
+            <ion-img
+                src="/assets/mapaPisos/Piso2.png"
+                alt="Mapa Piso 1"
+                style="width: 100%; height: auto; cursor: pointer;"
+            >
+            </ion-img>
+        </ion-slide>
+        <ion-slide>
+            <ion-img
+                src="/assets/mapaPisos/Piso3.png"
+                alt="Mapa Piso 1"
+                style="width: 100%; height: auto; cursor: pointer;"
+            >
+            </ion-img>
         </ion-slide>
 
     </ion-slides>
 
-        <ion-row class="ion-align-items-center ion-margin-top">
+    <ion-row class="ion-align-items-center ion-margin-top">
             
-            <ion-col size="10" offset="1">
-                <ion-button
-                    href="calendario"
-                    color="dark"
-                    expand="block"
-                    size="small"
-                >
-                    Calendario
-                </ion-button>
-            </ion-col>
+        <ion-col size="6">
+            <ion-button
+                href="calendario"
+                class="confBtn"
+                color="black-duoc"
+                expand="block"
+            >
+                Busca tu Profe
+            </ion-button>
+        </ion-col>
 
-            <ion-col size="10" offset="1">
-                <ion-button
-                    href="puntoInteres"
-                    color="dark"
-                    expand="block"
-                    size="small"
-                >
-                    Puntos de interés
-                </ion-button>
-            </ion-col>
+        <ion-col size="6">
+            <ion-button
+                href="Sala"
+                class="confBtn"
+                color="black-duoc"
+                expand="block"
+            >
+                Sala
+            </ion-button>
+        </ion-col>
 
-            <ion-col size="10" offset="1">
-                <ion-button
-                    href="preguntas"
-                    color="dark"
-                    expand="block"
-                    size="small"
-                >
-                    Preguntas Frecuentes
-                </ion-button>
-            </ion-col>
-        </ion-row>
+        <ion-col size="10" offset="1">
+            <ion-button
+                href="puntoInteres"
+                class="confBtn"
+                color="black-duoc"
+                expand="block"
+
+            >
+                Puntos de Interes
+            </ion-button>
+        </ion-col>
+
+        <ion-col size="10" offset="1">
+            <ion-button
+                href="preguntas"
+                class="confBtn"
+                color="black-duoc"
+                expand="block"
+
+            >
+                Preguntas Frecuentes
+            </ion-button>
+        </ion-col>
+    </ion-row>
+
+    <ion-footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <img 
+                    src="/assets/img/duoc.png" 
+                    alt="Duoc Maps Logo"
+                    class="img-footer-style">
+                <div style="display: flex; align-items: center;">
+                    <div class="footer-list">
+                      <p>Contáctanos</p>
+                      <p>Seguro de accidentes +56 9 8739238</p>
+                      <p>Mesa de ayuda +56 9 8739238</p>
+                      <p>Mesa de servicios +56 9 8739238</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </ion-footer>
 </ion-content>
