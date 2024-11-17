@@ -1,6 +1,4 @@
 import { Component } from "@angular/core";
-import { PopoverController } from "@ionic/angular";
-import { Popover2Component } from "../popover2/popover2.component";
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
@@ -9,8 +7,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
     styleUrls: ['./main.component.css']
 }) 
 export class MainComponent{
-    
-    
+        
     constructor(private inAppBrowser: InAppBrowser){}
 
     redirect() {
@@ -18,12 +15,10 @@ export class MainComponent{
     }
 
     option = {
-
         slidesPerView: 1.5,
         centeredSlides: true,
         loop:true,
-        spaceBetween:10
+        spaceBetween: 0,
     }
-
 
 }

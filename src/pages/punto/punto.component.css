@@ -1,0 +1,54 @@
+.BotonAtras{
+    width: 30px;
+    height: 30px;
+    color: black;
+}
+
+.PuntoDeInteres{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    justify-self: center;
+    background-color: #D9D9D9;
+    width: 700px;
+    margin: 60px;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.ImagenPunto{
+    width: 700px;
+    height: 400px;
+}
+
+.TextoPunto{
+    width: 400px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 34px;
+}
+
+.footer-info {
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    flex-direction: row;
+}
+
+.img-footer-style{
+    width: 190px; 
+    margin-right: 20px;
+}
+
+.footer-list{
+    text-align: center; 
+    font-size: xx-large
+}

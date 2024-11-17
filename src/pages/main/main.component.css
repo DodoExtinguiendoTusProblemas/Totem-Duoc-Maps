@@ -2,31 +2,42 @@
     height: 100%;
 }
 
-
-ion-card{
-    width: 100%;
-    height: 160px;
-    box-shadow: none;
-    border-radius: 12px;
-
+ion-toolbar{
+    height: 100px;
 }
-ion-card img {
-    object-fit: cover;
-    width: 100%;
-    transform: scale(1.1,1.1) rotate(1deg);
-    transition:  600ms all ease-in-out;
+
+.header-menu{
+    text-align: center;
+    margin-top: 41px;
+    font-size: x-large;
 }
+.texto{
+    margin-top:0; 
+    margin-bottom:0;
+}
+.title-header{
+    font-size: 52px; 
+    margin-top: 23px;
+}
+
 .swiper-slide-active{
-    transform: scale(1.05,1.05);
-    
+    transform: scale(1.05,1.05);   
 }
 
 .swiper-slide{
     transition: 400ms all ease-in-out;
 }
+
+.style-slide{
+    display: flex;
+    justify-content: flex-start;
+}
+
 .confBtn{
-    height: 54px;
+    height: 102px; /*87px;*/
     font-size: x-large;
+    margin-top: 31px;
+    font-weight: bold;
 }
 
 .textStyles{
@@ -36,10 +47,12 @@ ion-card img {
 .img-footer-style{
     width: 190px; 
     margin-right: 20px;
+    margin-left: 34.7px;
 }
+
 .footer-list{
     text-align: center; 
-    font-size: xx-large
+    font-size: xx-large;
 }
 
 .icon-style {
@@ -50,10 +63,10 @@ ion-card img {
 
 .footer-content {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
-    margin-top: 34px;
+    margin-top: 12px;
 }
 
 .footer-info {
@@ -65,6 +78,36 @@ ion-card img {
 }
 
 .lateral-menu{
-    max-height: 100px;
-    font-size: x-large;
+    font-size: 23px;
+    padding: 26px;
+}
+
+.icon-lateral{
+    width: 87px;
+}
+
+.contact-list{
+    padding: 0;
+    margin: 0;
+}
+
+.contact-title{
+    font-weight: bold;
+    font-size: 43px;
+}
+
+.text-footer{
+    margin-left: 74px;
+    text-align: justify;
+}
+
+.boton-menu-grande {
+    margin-top: 21px;
+    width: 76px;
+    font-size: 76px;
+}
+
+.imgSlide ion-img {
+    width: 94.9%;
+    height: auto;
 }

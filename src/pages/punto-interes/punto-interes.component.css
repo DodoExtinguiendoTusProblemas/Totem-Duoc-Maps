@@ -1,0 +1,60 @@
+.PuntosDeInteres{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 150px;
+}
+
+.PuntoInteres{
+    display: flex;
+    flex-direction: row;
+    width: 700px;
+    align-items: center;
+    background-color: #D9D9D9;
+}
+
+a{
+    text-decoration: none;
+}
+
+.ImagenPuntoInteres{
+    height: 50px;
+    width: 100px;
+    color: black;
+}
+
+.NombrePuntoInteres{
+    width: 600px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 34px;
+}
+
+.footer-info {
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    flex-direction: row;
+}
+
+.img-footer-style{
+    width: 190px; 
+    margin-right: 20px;
+}
+
+.footer-list{
+    text-align: center; 
+    font-size: xx-large
+}

@@ -1,0 +1,44 @@
+ion-card-title{
+    font-size: xx-large;
+}
+
+p{
+    font-size: large;    
+}
+
+ion-grid{
+    background-color: beige; 
+    margin-top: 34px; 
+    letter-spacing: 2px;
+    margin-bottom: 34px;
+}
+
+ion-card-content{
+    font-size: x-large;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+}
+
+ion-toolbar{
+    height: 100px;
+}
+
+.card-image{
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */ 
+    height: auto;
+}
+
+.eventCard{
+    margin-top: 87px;
+}
+
+.boton-menu-grande {
+    margin-top: 21px;
+    width: 76px;
+}
+
+.title-header{
+    font-size: 52px; 
+    margin-top: 23px;
+}

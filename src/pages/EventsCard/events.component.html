@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-toolbar color="orange-duoc">
+    <ion-title class="title-header">Calendario</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="Sala" class="boton-menu-grande"></ion-back-button>
+    </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-content>
+        <ion-card class="eventCard">
+            <ion-card-header class="ion-text-center">
+                <ion-card-title>{{ titulo }}</ion-card-title>
+            </ion-card-header>
+    
+            <ion-card-content>
+                {{ descripcion }}
+     
+                <ion-grid> 
+                    <ion-row> 
+                        <ion-col>{{ importTitle }}</ion-col> 
+                    </ion-row> 
+                    <ion-row> 
+                        <p>{{ ImportInf }}</p>
+                        <ion-col>{{ List1 }}</ion-col>
+                        <ion-col>{{ List2 }}</ion-col>
+                    </ion-row> 
+                </ion-grid>
+                
+                <img class="card-image" src="{{ imgEvent }}" alt="Imagen momentaneamente no disponible">
+            </ion-card-content>
+        </ion-card>
+    </ion-content>
+</ion-content>

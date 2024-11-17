@@ -1,0 +1,39 @@
+ion-toolbar{
+    height: 100px;
+}
+
+ion-card-title{
+    font-size: xx-large;
+}
+
+ion-button{
+    font-size: 19px;
+}
+
+.boton-menu-grande {
+    margin-top: 21px;
+    width: 76px;
+    height: 54px;
+}
+
+.iconConf{
+    font-size: 67px;
+}
+
+.title-header{
+    font-size: 52px; 
+    margin-top: 23px;
+}
+
+.searchSala{
+    margin-top: 12px;
+    font-size: x-large;
+}
+
+.errorMensaje{
+    margin-top: 719px;
+}
+
+#titleMensaje{
+    font-size: 48px;
+}

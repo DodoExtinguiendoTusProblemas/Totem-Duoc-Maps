@@ -34,27 +34,24 @@ import { environment } from '../environments/environment.prod';
 //AUTH GUARD
 import { InAppBrowser} from '@ionic-native/in-app-browser/ngx';
 import { CalendarComponent } from 'src/pages/calendar/calendar.component';
-import { CalendarModule } from 'ion2-calendar';
+
 import { SalaComponent } from 'src/pages/Sala/sala.component';
 import { PreguntasComponent } from 'src/pages/preguntas/preguntas.component';
-import { Popover2Component } from 'src/pages/popover2/popover2.component';
+
 
 
 
 
 @NgModule({
   declarations: [AppComponent,
-     MainComponent, 
+     MainComponent,
      SalaComponent,
-     PointComponent,
-     FoodPlaceComponent,
-     BibliotecaComponent,
-     EnfermeriaComponent,
-     Popover2Component,
-     FinanzasComponent,
-     PuntoEstudiantilComponent,
      CalendarComponent,
-     PreguntasComponent],
+     PreguntasComponent
+     EscuelasCarreraComponent,
+     ConsejeroCarreraComponent,
+     PuntoInteresComponent,
+     PuntoComponent],
   entryComponents: [],
   imports: [
     BrowserModule, 
@@ -65,8 +62,7 @@ import { Popover2Component } from 'src/pages/popover2/popover2.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     AngularFireAuthModule,
-    AngularFireStorageModule,
-    CalendarModule
+    AngularFireStorageModule
   ],
   providers: [
     InAppBrowser,

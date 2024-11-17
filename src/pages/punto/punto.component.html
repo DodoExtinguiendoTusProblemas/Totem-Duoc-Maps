@@ -1,0 +1,84 @@
+<ion-menu side="start" menuId="first" contentId="main" [swipeGesture]="true">
+  <ion-header>
+      <ion-toolbar color="orange-duoc" >
+      <ion-title >Duoc Maps</ion-title>
+      </ion-toolbar>
+  </ion-header>
+  <ion-content>
+      <ion-list>
+          <ion-item color="light"href="calendario" class="lateral-menu"><ion-icon name="calendar-number-outline"></ion-icon> Calendario</ion-item>
+          <ion-item color="light"href="escuelas-carrera" class="lateral-menu"><ion-icon name="school-outline"></ion-icon>Consejero</ion-item>
+          <ion-item color="light"href="punto-interes" class="lateral-menu"><ion-icon name="cafe-outline"></ion-icon>Puntos Interés</ion-item>
+          <ion-item color="light"href="Sala" class="lateral-menu"><ion-icon name="construct-outline"></ion-icon>Ajuste</ion-item>
+      </ion-list>
+  </ion-content>  
+</ion-menu>
+
+<ion-router-outlet id="main"></ion-router-outlet>
+  
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Inicio</ion-title>
+    <ion-buttons slot="start">
+        <ion-menu-button menu="first"></ion-menu-button>
+        <a href="punto-interes">
+          <ion-icon name="arrow-undo-circle-outline" class="BotonAtras"></ion-icon>
+        </a>
+      </ion-buttons>
+      
+    </ion-toolbar>
+  </ion-header>
+  
+<ion-content>
+
+  <section class="PuntoDeInteres" *ngIf="puntosFiltrados.length === 0">
+
+    <h1 class="TextoPunto">
+      Punto de Interés coming soon...
+    </h1>
+
+  </section>
+
+  <section class="PuntoDeInteres" *ngFor="let punto of puntosFiltrados">
+
+    <img src="{{punto.imagenPunto}}" alt="Descripción de la imagen" class="ImagenPunto">
+
+    <h1 class="TextoPunto">
+      {{punto.nombrePunto}}
+    </h1>
+
+    <h2 class="TextoPunto">
+      Horario de Atención
+    </h2>
+
+    <h3 class="TextoPunto">
+      {{punto.horarioPunto}}
+    </h3>
+
+    <h4 class="TextoPunto">
+      {{punto.descripcionPunto}}
+    </h4>
+
+  </section>
+
+  <ion-footer>
+    <div class="footer-content">
+        <div class="footer-info">
+            <img 
+                src="/assets/img/duoc.png" 
+                alt="Duoc Maps Logo"
+                class="img-footer-style">
+            <div style="display: flex; align-items: center;">
+                <div class="footer-list">
+                  <p>Contáctanos</p>
+                  <p>Seguro de accidentes +56 9 8739238</p>
+                  <p>Mesa de ayuda +56 9 8739238</p>
+                  <p>Mesa de servicios +56 9 8739238</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+  </ion-footer>
+
+</ion-content>
