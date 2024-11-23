@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="orange-duoc">
+    <ion-title class="title-header">{{ titulo }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="containerBack" color="orange-duoc">
+    <ion-back-button defaultHref="Sala" class="boton-menu-grande"></ion-back-button>
+  </div>
+  <ion-card class="card-sala">
+    <div id="panorama" class="imagen_360"></div>
+    <ion-card-header>
+      <ion-card-title>{{ tituloCard }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      {{ descripcion }}
+    </ion-card-content>
+ 
+    <ion-button [attr.href]="mapUrl">Ver en mapa</ion-button>
+  </ion-card>
+</ion-content>
+
+
+
+  

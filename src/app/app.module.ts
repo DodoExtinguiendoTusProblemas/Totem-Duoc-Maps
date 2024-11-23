@@ -37,7 +37,7 @@ import { CalendarComponent } from 'src/pages/calendar/calendar.component';
 
 import { SalaComponent } from 'src/pages/Sala/sala.component';
 import { PreguntasComponent } from 'src/pages/preguntas/preguntas.component';
-
+import { roomsComponent } from 'src/pages/rooms/rooms.component';
 
 
 
@@ -51,7 +51,8 @@ import { PreguntasComponent } from 'src/pages/preguntas/preguntas.component';
      EscuelasCarreraComponent,
      ConsejeroCarreraComponent,
      PuntoInteresComponent,
-     PuntoComponent],
+     PuntoComponent,
+     roomsComponent],
   entryComponents: [],
   imports: [
     BrowserModule, 

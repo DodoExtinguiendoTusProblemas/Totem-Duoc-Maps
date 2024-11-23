@@ -1,0 +1,55 @@
+.card-sala{
+    margin-top: 45px;
+} 
+
+ion-card ion-button {
+    text-align: center;
+    display: table;
+    margin: 0 auto;
+    width: 175px;
+}
+
+ion-button{
+    font-weight: bold;
+    font-size: x-large;
+    margin-bottom: 12px;
+}
+
+ion-card-content{
+    font-weight: bold;
+    font-size: x-large;
+}
+
+ion-card-title{
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.boton-menu-grande {
+    height: 59px;
+    margin-top: 13px;
+}
+
+.title-header{
+    font-size: 52px; 
+    margin-top: 23px;
+}
+
+.imagen_360{
+    width: 100%; 
+    height: 555px;
+}
+
+.containerBack{
+    justify-content: center;
+    display: flex;
+    margin-top: 345px;
+    background-color: bisque;
+    border-radius: 122px;
+    width: 125px;
+    margin-left: 450px;   
+}
+
+ion-back-button.boton-menu-grande::part(icon) { 
+    font-size: 132px; 
+}
