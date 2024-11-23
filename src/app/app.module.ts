@@ -10,15 +10,9 @@ import { MainComponent } from 'src/pages/main/main.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PointComponent } from 'src/pages/point/point.component';
-import { FoodPlaceComponent } from 'src/pages/food Place/foodPlace.component';
-import { BibliotecaComponent } from 'src/pages/Biblioteca/Biblioteca.component';
-import { EnfermeriaComponent } from 'src/pages/Enfermeria/Enfermeria.component';
 
 
 
-import { PuntoEstudiantilComponent } from 'src/pages/PuntoEstudiantil/PuntoEstudiantil.component';
-import { FinanzasComponent } from 'src/pages/Finanzas/Finanzas.component';
 import { FormsModule } from '@angular/forms';
 
 
@@ -47,7 +41,7 @@ import { roomsComponent } from 'src/pages/rooms/rooms.component';
      MainComponent,
      SalaComponent,
      CalendarComponent,
-     PreguntasComponent
+     PreguntasComponent,
      EscuelasCarreraComponent,
      ConsejeroCarreraComponent,
      PuntoInteresComponent,
