@@ -1,7 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { MainComponent } from 'src/pages/main/main.component';
-import { PointComponent } from 'src/pages/point/point.component';
 import { SalaComponent } from 'src/pages/Sala/sala.component';
 
 
@@ -14,7 +13,7 @@ import { PuntoInteresComponent } from 'src/pages/punto-interes/punto-interes.com
 import { PuntoComponent } from 'src/pages/punto/punto.component';
 
 //salas
-import { roomsComponent } from 'src/pages/rooms/rooms.component';
+// import { roomsComponent } from 'src/pages/rooms/rooms.component';
 
 //Eventos
 import { eventsComponent } from 'src/pages/EventsCard/events.component';
@@ -28,16 +27,12 @@ const routes: Routes = [
     component: CalendarComponent,
   },
   {
-    path: 'puntoInteres',
-    component: PointComponent,
-  },
-  {
     path: 'Sala',
     component: SalaComponent,
   },
-  { path: 'sala/:id', 
-    component: roomsComponent, 
-  },
+  // { path: 'sala/:id', 
+  //   component: roomsComponent, 
+  // },
   {
     path: 'evento/:id',
     component: eventsComponent, 
@@ -45,6 +40,10 @@ const routes: Routes = [
   {
     path: 'preguntas',
     component: PreguntasComponent
+  },
+  {
+    path: 'escuelas-carrera',
+    component: EscuelasCarreraComponent
   },
   {
     path: 'escuelas-carrera/:escuela',

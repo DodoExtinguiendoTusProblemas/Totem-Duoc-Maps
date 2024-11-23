@@ -10,15 +10,9 @@ import { MainComponent } from 'src/pages/main/main.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PointComponent } from 'src/pages/point/point.component';
-import { FoodPlaceComponent } from 'src/pages/food Place/foodPlace.component';
-import { BibliotecaComponent } from 'src/pages/Biblioteca/Biblioteca.component';
-import { EnfermeriaComponent } from 'src/pages/Enfermeria/Enfermeria.component';
 
 
 
-import { PuntoEstudiantilComponent } from 'src/pages/PuntoEstudiantil/PuntoEstudiantil.component';
-import { FinanzasComponent } from 'src/pages/Finanzas/Finanzas.component';
 import { FormsModule } from '@angular/forms';
 
 
@@ -37,6 +31,10 @@ import { CalendarComponent } from 'src/pages/calendar/calendar.component';
 
 import { SalaComponent } from 'src/pages/Sala/sala.component';
 import { PreguntasComponent } from 'src/pages/preguntas/preguntas.component';
+import { EscuelasCarreraComponent } from 'src/pages/escuelas-carrera/escuelas-carrera.component';
+import { ConsejeroCarreraComponent } from 'src/pages/consejero-carrera/consejero-carrera.component';
+import { PuntoInteresComponent } from 'src/pages/punto-interes/punto-interes.component';
+import { PuntoComponent } from 'src/pages/punto/punto.component';
 
 
 
@@ -47,7 +45,7 @@ import { PreguntasComponent } from 'src/pages/preguntas/preguntas.component';
      MainComponent,
      SalaComponent,
      CalendarComponent,
-     PreguntasComponent
+     PreguntasComponent,
      EscuelasCarreraComponent,
      ConsejeroCarreraComponent,
      PuntoInteresComponent,
