@@ -13,7 +13,7 @@ import { PuntoInteresComponent } from 'src/pages/punto-interes/punto-interes.com
 import { PuntoComponent } from 'src/pages/punto/punto.component';
 
 //salas
-// import { roomsComponent } from 'src/pages/rooms/rooms.component';
+import { roomsComponent } from 'src/pages/rooms/rooms.component';
 
 //Eventos
 import { eventsComponent } from 'src/pages/EventsCard/events.component';
@@ -30,9 +30,9 @@ const routes: Routes = [
     path: 'Sala',
     component: SalaComponent,
   },
-  // { path: 'sala/:id', 
-  //   component: roomsComponent, 
-  // },
+  { path: 'sala/:id', 
+     component: roomsComponent, 
+  },
   {
     path: 'evento/:id',
     component: eventsComponent, 
