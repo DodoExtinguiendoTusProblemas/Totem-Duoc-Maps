@@ -46,7 +46,7 @@ ion-toolbar{
 
 .img-footer-style{
     width: 190px; 
-    margin-right: 20px;
+    margin-right: 59px;
     margin-left: 34.7px;
 }
 
@@ -63,10 +63,9 @@ ion-toolbar{
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     text-align: center;
-    margin-top: 12px;
+    margin-top: 75px;
 }
 
 .footer-info {
@@ -75,6 +74,7 @@ ion-toolbar{
     flex-direction: column; 
     align-items: center; 
     flex-direction: row;
+    padding-bottom: 64px;
 }
 
 .lateral-menu{
