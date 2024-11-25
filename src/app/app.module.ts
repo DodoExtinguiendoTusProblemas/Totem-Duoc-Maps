@@ -33,8 +33,9 @@ import { SalaComponent } from 'src/pages/Sala/sala.component';
 import { PreguntasComponent } from 'src/pages/preguntas/preguntas.component';
 import { roomsComponent } from 'src/pages/rooms/rooms.component';
 
-
-
+import { EscuelasCarreraComponent } from 'src/pages/escuelas-carrera/escuelas-carrera.component';
+import { ConsejeroCarreraComponent } from 'src/pages/consejero-carrera/consejero-carrera.component';
+import { PuntoInteresComponent } from 'src/pages/punto-interes/punto-interes.component';
 
 @NgModule({
   declarations: [AppComponent,
@@ -45,7 +46,6 @@ import { roomsComponent } from 'src/pages/rooms/rooms.component';
      EscuelasCarreraComponent,
      ConsejeroCarreraComponent,
      PuntoInteresComponent,
-     PuntoComponent,
      roomsComponent],
   entryComponents: [],
   imports: [

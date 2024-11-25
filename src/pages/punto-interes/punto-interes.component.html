@@ -13,34 +13,29 @@
 
 <ion-content>
 
-  <section class="PuntosDeInteres" *ngFor="let puntoInteres of filtroPuntoInteres">
-    <div>
-      <a href="/punto-interes/{{puntoInteres.puntoInteres}}" class="PuntoInteres">
-        <i [attr.data-feather]="puntoInteres.imagenPuntoInteres" class="ImagenPuntoInteres"></i> 
-        <h1 class="NombrePuntoInteres">
-          {{puntoInteres.nombrePuntoInteres}}
-        </h1>
-      </a>
-    </div>
+  <section class="PuntosDeInteresHorizontal" *ngFor="let puntoInteres of filtroPuntoInteres">
+    
+    <section class="ImagenPuntoInteres">
+      <ng-container *ngIf="puntoInteres.imagenPunto; else noImage">
+        <img [src]="puntoInteres.imagenPunto" alt="" class="FotoPuntoInteres">
+      </ng-container>
+    
+      <ng-template #noImage>
+        <i [attr.data-feather]="puntoInteres.imagenPuntoInteres" class="FotoPuntoInteres"></i> 
+      </ng-template>
+    </section>
+
+    <section class="PuntosDeInteresVertical">
+      <h1 class="NombrePuntoInteres">
+        {{puntoInteres.nombrePuntoInteres}}
+      </h1>
+      <h4 class="DescripcionPuntoInteres">
+        {{ puntoInteres.descripcionPunto }}
+      </h4>
+      <p class="HorarioPuntoInteres">
+        {{ puntoInteres.horarioPunto}}
+      </p>
+    </section>
   </section>
 
 </ion-content>
-
-<ion-footer class="footer">
-  <div class="footer-content">
-      <div class="footer-info">
-          <img 
-              src="/assets/img/duoc.png" 
-              alt="Duoc Maps Logo"
-              class="img-footer-style">
-          <div style="display: flex; align-items: center;">
-              <div class="footer-list">
-                <p>Contáctanos</p>
-                <p>Seguro de accidentes +56 9 8739238</p>
-                <p>Mesa de ayuda +56 9 8739238</p>
-                <p>Mesa de servicios +56 9 8739238</p>
-              </div>
-          </div>
-      </div>
-  </div>
-</ion-footer>
