@@ -42,6 +42,12 @@ ion-toolbar{
     width: 300px;
 }
 
+.fotoConsejero{
+    height: 300px;
+    width: 200px;
+    border-radius: 50px;
+}
+
 .ConsejeroVertical{
     display: flex;
     flex-direction: column;
