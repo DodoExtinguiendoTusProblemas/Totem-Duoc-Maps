@@ -36,6 +36,7 @@ import { roomsComponent } from 'src/pages/rooms/rooms.component';
 import { EscuelasCarreraComponent } from 'src/pages/escuelas-carrera/escuelas-carrera.component';
 import { ConsejeroCarreraComponent } from 'src/pages/consejero-carrera/consejero-carrera.component';
 import { PuntoInteresComponent } from 'src/pages/punto-interes/punto-interes.component';
+import { MapaComponent } from 'src/pages/mapa/mapa.component';
 
 @NgModule({
   declarations: [AppComponent,
@@ -46,7 +47,8 @@ import { PuntoInteresComponent } from 'src/pages/punto-interes/punto-interes.com
      EscuelasCarreraComponent,
      ConsejeroCarreraComponent,
      PuntoInteresComponent,
-     roomsComponent],
+     roomsComponent,
+     MapaComponent],
   entryComponents: [],
   imports: [
     BrowserModule, 
