@@ -1,12 +1,7 @@
-<ion-router-outlet id="main"></ion-router-outlet>
-  
 <ion-header>
   <ion-toolbar color="orange-duoc">
     <ion-title class="title-header">Consejeros Carrera</ion-title>
     <ion-buttons slot="start">
-      <ion-button href="/" class="boton-menu-grande">
-        <ion-icon name="home-outline" class="iconConf"></ion-icon>
-      </ion-button>
       <ion-button href="escuelas-carrera" class="boton-menu-grande">
         <ion-icon name="arrow-back-outline" class="iconConf"></ion-icon>
       </ion-button>
@@ -16,8 +11,8 @@
 
 <ion-content>
 
-  <section class="ConsejeroHorizontal">
-    <input type="text" (input)="filtrarPorNombre($event)" placeholder="Buscar consejero 🔎" class="BuscarConsejero"/>
+  <section class="ConsejeroSearch">
+      <ion-searchbar color="light" (input)="filtrarPorNombre($event)"  placeholder="Buscar consejero 🔎" class="BuscarConsejero"></ion-searchbar>
   </section>
 
   <section class="ConsejeroHorizontal" *ngIf="consejerosFiltrados.length === 0">
