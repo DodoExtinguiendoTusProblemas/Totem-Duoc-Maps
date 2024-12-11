@@ -27,16 +27,19 @@ export class MapaComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(params => {
       const piso = params['piso'];
+      //console.log('Piso recibido desde la URL:', piso);
       this.filtrarMapa(piso);
     });
   }
 
   filtrarMapa(piso: string) {
     if (!piso) {
-      this.mapaFiltrado = this.mapas.slice();
-    } else {
       this.mapaFiltrado = this.mapas.filter(mapa => mapa.link && mapa.link !== "");
+    } else {
+      const pisoMinusculas = piso.toLowerCase();
+      this.mapaFiltrado = this.mapas.filter(mapa => mapa.piso.toLowerCase() === pisoMinusculas && mapa.link && mapa.link !== "");
     }
+    //console.log('Mapas filtrados:', this.mapaFiltrado);
   }
 
   sanitizeUrl(url: string): SafeResourceUrl {
