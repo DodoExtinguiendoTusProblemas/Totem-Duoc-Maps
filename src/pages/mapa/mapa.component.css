@@ -15,3 +15,18 @@
     overflow: hidden;
     display: block;
 }
+
+.boton-menu-grande {
+    margin-top: 21px;
+    width: 76px;
+    height: 54px;
+}
+
+.iconConf{
+    font-size: 67px;
+}
+
+.title-header{
+    font-size: 52px; 
+    margin-top: 23px;
+}
