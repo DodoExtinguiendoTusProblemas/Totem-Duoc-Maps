@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar color="orange-duoc">
+    <ion-title class="title-header">Consejeros Carrera</ion-title>
+    <ion-buttons slot="start">
+      <ion-button href="escuelas-carrera" class="boton-menu-grande">
+        <ion-icon name="arrow-back-outline" class="iconConf"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Filtro de búsqueda -->
+  <section class="ConsejeroSearch">
+    <ion-searchbar color="light" (input)="filtrarPorNombre($event)" placeholder="Buscar consejero 🔎" class="BuscarConsejero"></ion-searchbar>
+  </section>
+
+  <!-- Mensaje cuando no hay consejeros filtrados -->
+  <section *ngIf="consejerosFiltrados.length === 0" class="ConsejeroHorizontal">
+    <section class="ImagenConsejero">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="150" height="150" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+        <circle cx="8.5" cy="7" r="4" />
+        <line x1="18" x2="23" y1="8" y2="13" />
+        <line x1="23" x2="18" y1="8" y2="13" />
+      </svg>
+    </section>
+
+    <section class="ConsejeroVertical">
+      <h1 class="TextoConsejero">
+        Consejeros coming soon...
+      </h1>
+    </section>
+  </section>
+
+  <!-- Mostrar consejeros filtrados -->
+  <section class="ConsejeroHorizontal" *ngFor="let consejero of consejerosFiltrados">
+    <section class="ImagenConsejero">
+      <!-- Mostrar imagen del consejero si existe -->
+      <ng-container *ngIf="consejero.ruta_imagen?.trim(); else noImage">
+        <img [src]="consejero.ruta_imagen" alt="Imagen de {{ consejero.nombre_completo }}" class="fotoConsejero">
+      </ng-container>
+
+      <!-- Si no tiene imagen, mostrar un ícono por defecto -->
+      <ng-template #noImage>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="150" height="150" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+        </svg>
+      </ng-template>
+    </section>
+
+    <section class="ConsejeroVertical">
+      <h1 class="TextoConsejero">
+        {{ consejero.nombre_completo }}
+      </h1>
+      <h4 class="TextoConsejero">
+        {{ consejero.carrera }}
+      </h4>
+      <p class="TextoConsejero">
+        <a [href]="'mailto:' + consejero.email">{{ consejero.email }}</a>
+      </p>
+    </section>
+  </section>
+</ion-content>

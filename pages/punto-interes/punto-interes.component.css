@@ -1,0 +1,80 @@
+ion-toolbar{
+    height: 100px;
+}
+
+.boton-menu-grande {
+    margin-top: 21px;
+    width: 76px;
+    height: 54px;
+}
+
+.title-header{
+    font-size: 52px; 
+    margin-top: 23px;
+}
+
+.iconConf{
+    font-size: 67px;
+}
+
+.PuntosDeInteresHorizontal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    justify-self: center;
+    background-color: #D9D9D9;
+    width: 700px;
+    margin: 60px;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.ImagenPuntoInteres{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    margin-top: 100px;
+}
+
+.FotoPuntoInteres{
+    height: 200px;
+    width: 250px;
+    color: black;
+    border-radius: 50px;
+}
+
+.PuntosDeInteresVertical{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    margin: 15px 15px 15px 15px;
+}
+
+.NombrePuntoInteres{
+    width: 400px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 34px;
+}
+
+.DescripcionPuntoInteres{
+    width: 400px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.HorarioPuntoInteres{
+    width: 400px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 24px;
+}

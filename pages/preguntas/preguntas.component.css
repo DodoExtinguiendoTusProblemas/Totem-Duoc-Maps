@@ -1,0 +1,42 @@
+ion-toolbar{
+    height: 100px;
+}
+
+.boton-menu-grande {
+    margin-top: 21px;
+    width: 76px;
+    height: 54px;
+}
+
+.title-header{
+    font-size: 52px; 
+    margin-top: 23px;
+}
+
+.iconConf{
+    font-size: 67px;
+}
+
+.PreguntasFrecuentes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    height: 211px;
+}
+
+.pregunta{
+    width: 700px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #d9d9d9;
+    padding: 24px;
+}
+
+.respuesta{
+    width: 700px;
+    font-size: 24px;
+    font-weight: bold;
+}
+

@@ -1,0 +1,36 @@
+ion-toolbar{
+    height: 100px;
+}
+
+.mapa{
+    --padding-top: 0;
+    --padding-bottom: 0;
+    --padding-start: 0;
+    --padding-end: 0;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+.pantallaCompleta{
+    width: 100%;
+    height: 100%;
+    border: none;
+    overflow: hidden;
+    display: block;
+}
+
+.boton-menu-grande {
+    margin-top: 21px;
+    width: 76px;
+    height: 54px;
+}
+
+.iconConf{
+    font-size: 67px;
+}
+
+.title-header{
+    font-size: 52px; 
+    margin-top: 23px;
+}

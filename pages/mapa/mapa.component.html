@@ -1,0 +1,24 @@
+<ion-router-outlet id="main"></ion-router-outlet>
+  
+<ion-header>
+  <ion-toolbar color="orange-duoc">
+    <ion-title class="title-header">Mapa Sede</ion-title>
+    <ion-buttons slot="start">
+      <ion-button href="/" class="boton-menu-grande">
+        <ion-icon name="home-outline" class="iconConf"></ion-icon>
+       </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="mapa">
+
+  <iframe
+    *ngFor="let mapa of mapaFiltrado"
+    [src]="sanitizeUrl(mapa.link)"
+    frameborder="0"
+    allowfullscreen
+    class="pantallaCompleta"
+  ></iframe>
+
+</ion-content>
