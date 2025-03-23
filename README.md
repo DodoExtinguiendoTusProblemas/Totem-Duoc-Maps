@@ -42,7 +42,38 @@ npm install @ionic/angular@5.9.4
 ```
 ionic serve 
 ```
+<h2>🌐Subir a Firebase hosting:</h2>
 
-<h2>🍰 Contribution Guidelines:</h2>
+<p>1. Instalar Firebase cli</p>
 
-Solo se solicita al crear un nuevo commit anunciarlo por discord en el apartado de "commits"
+```
+npm install -g firebase-tools
+```
+
+<p>2.Iniciar sesión en Firebase (cuenta de Dodo)</p>
+
+```
+firebase login
+```
+<p>3.Inicializar el Proyecto</p>
+
+<p>Dirígete a la carpeta del proyecto que deseas subir a Firebase Hosting. Luego, inicializa Firebase en tu proyecto:</p>
+
+```
+firebase init
+```
+Esto abrirá una serie de opciones de configuración. Selecciona las siguientes opciones:
+
+* Hosting: Selecciona la opción para configurar Firebase Hosting.
+
+* Configurar un sitio para la web: Elige admin Duoc Maps.
+
+* Directorio público: Ingresa el nombre de la carpeta donde se encuentra tu proyecto. Si es una aplicación web, esta carpeta suele ser build, dist o public, dependiendo de tu configuración.
+
+* Configuración de una SPA (Single Page Application): No.
+
+<p>4.Subir el Proyecto a Firebase Hosting</p>
+
+```
+firebase deploy
+```
