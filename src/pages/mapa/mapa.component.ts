@@ -17,7 +17,7 @@ export class MapaComponent implements OnInit {
     { "piso": "Piso3", "link": "https://tour.metareal.com/apps/player?asset=84dcbd8a-b536-4908-ad63-1fa3573a0855" },
     { "piso": "Piso4", "link": "" },
     { "piso": "Piso5", "link": "https://tour.metareal.com/apps/player?asset=3d8b7462-3ce8-4407-ba80-830d82302060" },
-    { "piso": "Piso6", "link": "https://tour.metareal.com/apps/player?asset=dd20ba1d-d81f-4bd8-8b4a-1264c091bd1f" }
+    { "piso": "Piso6", "link": "https://tour.metareal.com/apps/player?asset=3d958988-ef89-4916-9834-65975d6f514d" }
   ];
 
   mapaFiltrado: any[] = [];
@@ -27,7 +27,6 @@ export class MapaComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(params => {
       const piso = params['piso'];
-      //console.log('Piso recibido desde la URL:', piso);
       this.filtrarMapa(piso);
     });
   }
@@ -39,7 +38,6 @@ export class MapaComponent implements OnInit {
       const pisoMinusculas = piso.toLowerCase();
       this.mapaFiltrado = this.mapas.filter(mapa => mapa.piso.toLowerCase() === pisoMinusculas && mapa.link && mapa.link !== "");
     }
-    //console.log('Mapas filtrados:', this.mapaFiltrado);
   }
 
   sanitizeUrl(url: string): SafeResourceUrl {

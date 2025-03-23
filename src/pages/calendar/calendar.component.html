@@ -2,7 +2,9 @@
   <ion-toolbar color="orange-duoc">
     <ion-title class="title-header">Calendario</ion-title>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/" class="boton-menu-grande"></ion-back-button>
+      <ion-button href="/" class="boton-menu-grande">
+        <ion-icon name="home-outline" class="iconConf"></ion-icon>
+      </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -14,9 +16,8 @@
       <ion-card-title id="titleCalendar">{{ event.titulo }}</ion-card-title>
     </ion-card-header>
 
-    <ion-card-content>
-      {{ event.descripcion }}
-    </ion-card-content>
+      <!-- Aquí muestra la pregunta o descripción dinámica -->
+      <p>{{ descripcionParaMostrar }}</p>
     <ion-button color="orange-duoc" id="calendarButton" (click)="verDetalle(event.id)">Quiero Saber Mas</ion-button>
   </ion-card>
 </ion-content>

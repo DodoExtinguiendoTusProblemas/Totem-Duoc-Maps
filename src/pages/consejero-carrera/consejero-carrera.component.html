@@ -10,13 +10,13 @@
 </ion-header>
 
 <ion-content>
-
+  <!-- Filtro de búsqueda -->
   <section class="ConsejeroSearch">
-      <ion-searchbar color="light" (input)="filtrarPorNombre($event)"  placeholder="Buscar consejero 🔎" class="BuscarConsejero"></ion-searchbar>
+    <ion-searchbar color="light" (input)="filtrarPorNombre($event)" placeholder="Buscar consejero 🔎" class="BuscarConsejero"></ion-searchbar>
   </section>
 
-  <section class="ConsejeroHorizontal" *ngIf="consejerosFiltrados.length === 0">
-
+  <!-- Mensaje cuando no hay consejeros filtrados -->
+  <section *ngIf="consejerosFiltrados.length === 0" class="ConsejeroHorizontal">
     <section class="ImagenConsejero">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="150" height="150" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
         <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
@@ -24,7 +24,6 @@
         <line x1="18" x2="23" y1="8" y2="13" />
         <line x1="23" x2="18" y1="8" y2="13" />
       </svg>
-
     </section>
 
     <section class="ConsejeroVertical">
@@ -32,36 +31,35 @@
         Consejeros coming soon...
       </h1>
     </section>
-
   </section>
 
+  <!-- Mostrar consejeros filtrados -->
   <section class="ConsejeroHorizontal" *ngFor="let consejero of consejerosFiltrados">
-    
     <section class="ImagenConsejero">
-      <ng-container *ngIf="consejero.imagenConsejero?.trim(); else noImage">
-        <img src="../../assets/consejeros/{{consejero.imagenConsejero}}" alt="" class="fotoConsejero" (error)="onImageError()">
+      <!-- Mostrar imagen del consejero si existe -->
+      <ng-container *ngIf="consejero.ruta_imagen?.trim(); else noImage">
+        <img [src]="consejero.ruta_imagen" alt="Imagen de {{ consejero.nombre_completo }}" class="fotoConsejero">
       </ng-container>
-    
+
+      <!-- Si no tiene imagen, mostrar un ícono por defecto -->
       <ng-template #noImage>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="150" height="150" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
           <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
           <circle cx="12" cy="7" r="4" />
         </svg>
       </ng-template>
-      
     </section>
 
     <section class="ConsejeroVertical">
       <h1 class="TextoConsejero">
-        {{ consejero.nombreConsejero }}
+        {{ consejero.nombre_completo }}
       </h1>
       <h4 class="TextoConsejero">
         {{ consejero.carrera }}
       </h4>
       <p class="TextoConsejero">
-        {{ consejero.correoConsejero}}
+        <a [href]="'mailto:' + consejero.email">{{ consejero.email }}</a>
       </p>
     </section>
   </section>
-  
 </ion-content>

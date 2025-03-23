@@ -1,5 +1,5 @@
 <ion-router-outlet id="main"></ion-router-outlet>
-  
+
 <ion-header>
   <ion-toolbar color="orange-duoc">
     <ion-title class="title-header">Puntos de Interés</ion-title>
@@ -15,26 +15,26 @@
 
   <section class="PuntosDeInteresHorizontal" *ngFor="let puntoInteres of filtroPuntoInteres">
     
+    <!-- Imagen del punto de interés -->
     <section class="ImagenPuntoInteres">
-      <ng-container *ngIf="puntoInteres.imagenPunto; else noImage">
-        <img [src]="puntoInteres.imagenPunto" alt="" class="FotoPuntoInteres">
+      <ng-container *ngIf="puntoInteres.ruta_imagen; else noImage">
+        <img [src]="puntoInteres.ruta_imagen" alt="Imagen del punto de interés" class="FotoPuntoInteres">
       </ng-container>
     
+      <!-- Si no hay imagen, muestra un icono de Feather (puedes ajustar el icono) -->
       <ng-template #noImage>
-        <i [attr.data-feather]="puntoInteres.imagenPuntoInteres" class="FotoPuntoInteres"></i> 
+        <i data-feather="image" class="FotoPuntoInteres"></i>  <!-- Aquí puedes poner un icono predeterminado -->
       </ng-template>
     </section>
 
+    <!-- Detalles del punto de interés -->
     <section class="PuntosDeInteresVertical">
       <h1 class="NombrePuntoInteres">
-        {{puntoInteres.nombrePuntoInteres}}
+        {{ puntoInteres.titulo }}
       </h1>
       <h4 class="DescripcionPuntoInteres">
-        {{ puntoInteres.descripcionPunto }}
+        {{ puntoInteres.descripcion }}
       </h4>
-      <p class="HorarioPuntoInteres">
-        {{ puntoInteres.horarioPunto}}
-      </p>
     </section>
   </section>
 

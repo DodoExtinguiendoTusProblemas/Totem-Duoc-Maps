@@ -15,10 +15,7 @@ export class EscuelasCarreraComponent implements AfterViewInit {
 
   escuelas = [
     {"escuela": "AdministracionNegocios", "iconoEscuela": "bar-chart", "nombreEscuela": "Administración y Negocios"},
-    // {"escuela": "Comunicacion", "iconoEscuela": "message-square", "nombreEscuela": "Comunicación"},
     {"escuela": "Construccion", "iconoEscuela": "box", "nombreEscuela": "Construcción"},
-    // {"escuela": "Disenno", "iconoEscuela": "zap", "nombreEscuela": "Diseño"},
-    // {"escuela": "Gastronomia", "iconoEscuela": "award", "nombreEscuela": "Gastronomía"},
     {"escuela": "InformaticaTelecomunicaciones", "iconoEscuela": "code", "nombreEscuela": "Informática y Telecomunicaciones"},
     {"escuela": "IngenieriaRecursosNaturales", "iconoEscuela": "sun", "nombreEscuela": "Ingeniería y Recursos Naturales"},
     {"escuela": "Salud", "iconoEscuela": "activity", "nombreEscuela": "Salud"},

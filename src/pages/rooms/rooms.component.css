@@ -6,7 +6,7 @@ ion-card ion-button {
     text-align: center;
     display: table;
     margin: 0 auto;
-    width: 175px;
+    width: 100%;
 }
 
 ion-button{
@@ -45,10 +45,9 @@ ion-card-title{
     display: flex;
     margin-top: 345px;
     background-color: bisque;
-    border-radius: 122px;
-    width: 125px;
-    margin-left: 450px;   
+    border-radius: 34px;
 }
+
 
 ion-back-button.boton-menu-grande::part(icon) { 
     font-size: 132px; 

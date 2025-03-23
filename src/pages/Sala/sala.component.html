@@ -10,148 +10,166 @@
 </ion-header>
 
 <ion-content>
-    <ion-searchbar class="searchSala" (ionInput)="filterSalas($event)" show-clear-button="focus" placeholder="Buscar Sala"></ion-searchbar>
-
-    <ng-template #SearchError>
-      <ion-card class="errorMensaje"  *ngIf="errormsj">
-        <ion-card-header class="ion-text-center">
-          <ion-card-title id="titleMensaje" >{{ errormsj }}</ion-card-title>
-        </ion-card-header>
-      </ion-card>
-    </ng-template>
+  <ion-searchbar color="light" (input)="filterSalas($event)"  placeholder="Buscar Sala 🔎" class="BuscarSala"></ion-searchbar>
+  <ng-template #SearchError>
+    <ion-card class="errorMensaje"  *ngIf="errormsj">
+      <ion-card-header class="ion-text-center">
+        <ion-card-title id="titleMensaje" >{{ errormsj }}</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  </ng-template>
     
-    <ion-card *ngIf="filtroSala_1.length > 0;else SearchError">
-      <ion-card-header class="ion-text-center">
-        <ion-card-title>Piso -1</ion-card-title>
-      </ion-card-header>
-    </ion-card>
-    <ion-grid [fixed]="true">
-      <ion-row>
-        <ion-col class="ion-text-center">
-            <ion-row>
-              <ion-col class="ion-text-center" *ngFor="let sala of filtroSala_1">
-                <ion-button color="light" (click)="verSala(sala.toLowerCase())">
-                  {{ sala }}
-                </ion-button>
-              </ion-col>
-            </ion-row>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+  <ion-card *ngIf="filtroSala_1.length > 0;else SearchError">
+    <ion-card-header class="ion-text-center">
+      <ion-card-title>Piso -1</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  <ion-grid [fixed]="true">
+    <ion-row>
+      <ion-col class="ion-text-center">
+          <ion-row>
+            <ion-col class="ion-text-center" *ngFor="let sala of filtroSalas">
+              <ion-button color="light" (click)="verSala(sala.titulo)">
+                {{ sala.titulo }}
+              </ion-button>
+            </ion-col>
+          </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-    <ion-card *ngIf="filtroSala1.length > 0">
-        <ion-card-header class="ion-text-center">
-          <ion-card-title>Piso 1</ion-card-title>
-        </ion-card-header>
-    </ion-card>
-    <ion-grid [fixed]="true">
-      <ion-row>
-        <ion-col class="ion-text-center">
-            <ion-row>
-              <ion-col class="ion-text-center" *ngFor="let sala of filtroSala1">
-                <ion-button color="light">
-                  {{ sala }}
-                </ion-button>
-              </ion-col>
-            </ion-row>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+  <ion-card *ngIf="filtroSala_2.length > 0">
+    <ion-card-header class="ion-text-center">
+      <ion-card-title>Piso -2</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  <ion-grid [fixed]="true">
+    <ion-row>
+      <ion-col class="ion-text-center">
+          <ion-row>
+            <ion-col class="ion-text-center" *ngFor="let sala of filtroSala_2">
+              <ion-button color="light" (click)="verSala(sala.toLowerCase())">
+                {{ sala }}
+              </ion-button>
+            </ion-col>
+          </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-    <ion-card *ngIf="filtroSala2.length > 0">
+  <ion-card *ngIf="filtroSala1.length > 0">
       <ion-card-header class="ion-text-center">
-        <ion-card-title>Piso 2</ion-card-title>
+        <ion-card-title>Piso 1</ion-card-title>
       </ion-card-header>
-    </ion-card>
-    <ion-grid [fixed]="true">
-      <ion-row>
-        <ion-col class="ion-text-center">
-            <ion-row>
-              <ion-col class="ion-text-center" *ngFor="let sala of filtroSala2">
-                <ion-button color="light">
-                  {{ sala }}
-                </ion-button>
-              </ion-col>
-            </ion-row>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+  </ion-card>
+  <ion-grid [fixed]="true">
+    <ion-row>
+      <ion-col class="ion-text-center">
+          <ion-row>
+            <ion-col class="ion-text-center" *ngFor="let sala of filtroSala1">
+              <ion-button color="light" (click)="verSala(sala.toLowerCase())">
+                {{ sala }}
+              </ion-button>
+            </ion-col>
+          </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-    <ion-card *ngIf="filtroSala3.length > 0">
-      <ion-card-header class="ion-text-center">
-        <ion-card-title>Piso 3</ion-card-title>
-      </ion-card-header>
-    </ion-card>
-    <ion-grid [fixed]="true">
-      <ion-row>
-        <ion-col class="ion-text-center">
-            <ion-row>
-              <ion-col class="ion-text-center" *ngFor="let sala of filtroSala2">
-                <ion-button color="light">
-                  {{ sala }}
-                </ion-button>
-              </ion-col>
-            </ion-row>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+  <ion-card *ngIf="filtroSala2.length > 0">
+    <ion-card-header class="ion-text-center">
+      <ion-card-title>Piso 2</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  <ion-grid [fixed]="true">
+    <ion-row>
+      <ion-col class="ion-text-center">
+          <ion-row>
+            <ion-col class="ion-text-center" *ngFor="let sala of filtroSala2">
+              <ion-button color="light" (click)="verSala(sala.toLowerCase())">
+                {{ sala }}
+              </ion-button>
+            </ion-col>
+          </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-    <ion-card *ngIf="filtroSala4.length > 0">
-      <ion-card-header class="ion-text-center">
-        <ion-card-title>Piso 4</ion-card-title>
-      </ion-card-header>
-    </ion-card>
-    <ion-grid [fixed]="true">
-      <ion-row>
-        <ion-col class="ion-text-center">
-            <ion-row>
-              <ion-col class="ion-text-center" *ngFor="let sala of filtroSala4">
-                <ion-button color="light" (click)="verSala(sala.toLowerCase())">
-                  {{ sala }}
-                </ion-button>
-              </ion-col>
-            </ion-row>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+  <ion-card *ngIf="filtroSala3.length > 0">
+    <ion-card-header class="ion-text-center">
+      <ion-card-title>Piso 3</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  <ion-grid [fixed]="true">
+    <ion-row>
+      <ion-col class="ion-text-center">
+          <ion-row>
+            <ion-col class="ion-text-center" *ngFor="let sala of filtroSala3">
+              <ion-button color="light" (click)="verSala(sala.toLowerCase())">
+                {{ sala }}
+              </ion-button>
+            </ion-col>
+          </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-    <ion-card *ngIf="filtroSala5.length > 0">
-      <ion-card-header class="ion-text-center">
-        <ion-card-title>Piso 5</ion-card-title>
-      </ion-card-header>
-    </ion-card>
-    <ion-grid [fixed]="true">
-      <ion-row>
-        <ion-col class="ion-text-center">
-            <ion-row>
-              <ion-col class="ion-text-center" *ngFor="let sala of filtroSala5">
-                <ion-button color="light" (click)="verSala(sala.toLowerCase())">
-                  {{ sala }}
-                </ion-button>
-              </ion-col>
-            </ion-row>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+  <ion-card *ngIf="filtroSala4.length > 0">
+    <ion-card-header class="ion-text-center">
+      <ion-card-title>Piso 4</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  <ion-grid [fixed]="true">
+    <ion-row>
+      <ion-col class="ion-text-center">
+          <ion-row>
+            <ion-col class="ion-text-center" *ngFor="let sala of filtroSala4">
+              <ion-button color="light" (click)="verSala(sala.toLowerCase())">
+                {{ sala }}
+              </ion-button>
+            </ion-col>
+          </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-    <ion-card *ngIf="filtroSala6.length > 0">
-      <ion-card-header class="ion-text-center">
-        <ion-card-title class="titleCard">Piso 6</ion-card-title>
-      </ion-card-header>
-    </ion-card>
-    <ion-grid [fixed]="true">
-      <ion-row>
-        <ion-col class="ion-text-center">
-            <ion-row>
-              <ion-col class="ion-text-center" *ngFor="let sala of filtroSala6">
-                <ion-button color="light" (click)="verSala(sala.toLowerCase())">
-                  {{ sala }}
-                </ion-button>
-              </ion-col>
-            </ion-row>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+  <ion-card *ngIf="filtroSala5.length > 0">
+    <ion-card-header class="ion-text-center">
+      <ion-card-title>Piso 5</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  <ion-grid [fixed]="true">
+    <ion-row>
+      <ion-col class="ion-text-center">
+          <ion-row>
+            <ion-col class="ion-text-center" *ngFor="let sala of filtroSala5">
+              <ion-button color="light" (click)="verSala(sala.toLowerCase())">
+                {{ sala }}
+              </ion-button>
+            </ion-col>
+          </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-card *ngIf="filtroSala6.length > 0">
+    <ion-card-header class="ion-text-center">
+      <ion-card-title class="titleCard">Piso 6</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  <ion-grid [fixed]="true">
+    <ion-row>
+      <ion-col class="ion-text-center">
+          <ion-row>
+            <ion-col class="ion-text-center" *ngFor="let sala of filtroSala6">
+              <ion-button color="light" (click)="verSala(sala.toLowerCase())">
+                {{ sala }}
+              </ion-button>
+            </ion-col>
+          </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
 
   

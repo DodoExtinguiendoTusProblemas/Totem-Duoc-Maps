@@ -14,6 +14,7 @@ export class roomsComponent{
     descripcion: string; 
     imageUrl: string;
     mapUrl: string;
+    mostrarBoton?: boolean;
 
     private InfoSala = {
         //pISO -1
@@ -21,8 +22,8 @@ export class roomsComponent{
             titulo:'Sala SB-01',
             tituloCard: '¿Cómo Llegar?',
             descripcion: 'Se encuentra ubicado en el sector, a un costado de los casilleros. Junto al número de la sala, se encuentra un letrero verde de emergencias, el cual se puede apreciar claramente. De igual manera, se encuentra el área de ejercicio, donde se puede identificar por las áreas verdes y la mesa de ping-pong.',
-            imageUrl: 'assets/img360/Piso -1/01.webp'
-        },
+            imageUrl: /*'assets/img360/Piso -1/01.webp' */ 'file:///C:/Users/ACER/Desktop/Dodo/Pruebas/Totem-Duoc-Maps-main/src/assets/img360/Piso%20-1/Sala%20Informatica.webp'
+        }, 
         'sb-02': {
             titulo:'Sala SB-02',
             tituloCard: '¿Cómo Llegar?',
@@ -123,32 +124,340 @@ export class roomsComponent{
             titulo:'Sala Administración',
             tituloCard: '¿Cómo Llegar?',
             descripcion: 'Su ubicación está frente a los ascensores. En el costado izquierdo, se encuentra un dispensador de agua; en el costado derecho, se puede observar un extintor junto a la puerta y, en la pared, un cartel que dice: "ADMINISTRACIÓN".',
-            imageUrl: 'assets/img360/Piso -1/admin.webp'
+            imageUrl: 'assets/img360/Piso -1/admin.webp',
+            mostrarBoton: true
         },
         'comunicación y extensión': {
             titulo:'Sala comunicación y extensión',
             tituloCard: '¿Cómo Llegar?',
             descripcion: 'Su ubicación está frente a los ascensores. En el costado derecho, se encuentran los computadores para su uso comunitario, y frente a estos, se pueden ver puntos de reciclaje. En la ventana, se muestra un letrero que dice: "ADMISIÓN COMUNICACIÓN Y EXTENSIÓN".',
-            imageUrl: 'assets/img360/Piso -1/comunicacion_extension.webp'
+            imageUrl: 'assets/img360/Piso -1/comunicacion_extension.webp',
+            mostrarBoton: true
         },
         'centro de fotocopiado': {
             titulo:'Sala Centro de Fotocopiado',
             tituloCard: '¿Cómo Llegar?',
             descripcion: 'Su ubicación está frente a los ascensores. En el costado derecho, se encuentra un extintor, y junto a él, se puede ver un televisor con las instrucciones para fotocopiar. En las ventanas, se muestra un letrero que dice: "CENTRO DE FOTOCOPIADO".',
-            imageUrl: 'assets/img360/Piso -1/img_print.webp'
+            imageUrl: 'assets/img360/Piso -1/img_print.webp',
+            mostrarBoton: true
         },
         'laboratorio de informática': {
             titulo:'Laboratorio de informática',
             tituloCard: '¿Cómo Llegar?',
             descripcion: 'Su ubicación está al costado de la zona de ejercicio. En el techo, se puede apreciar que en un lado hay un letrero de color verde de salida. Se puede observar que en la ventana se tiene el cartel que dice: "INFORMÁTICA Y TELECOMUNICACIONES".',
-            imageUrl: 'assets/img360/Piso -1/Sala Informatica.webp'
+            imageUrl: 'assets/img360/Piso -1/Sala Informatica.webp',
+            mostrarBoton: true
         },
-        //Piso -2
+        //Piso -2 FALTA ESTEEEEE
+        'sb-001': {
+            titulo:'Sala SB-001',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra en el piso -2. Al costado hay letreros de emergencia junto con un cartel que dice "Patio Construcción". También se puede apreciar un letrero verde de salida de emergencia, y, a un lado de la entrada, se encuentran extintores con sus respectivos carteles',
+            imageUrl: 'assets/img360/Piso -2/001-mecanica.webp'
+        },
+        'sb-002': {
+            titulo:'Sala SB-002',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra en el piso -2. En la puerta hay un letrero con normas de seguridad y otro letrero celeste que dice: "Use calzado de seguridad". En la pared, se encuentra un panel de anuncios de la sede, y a un costado de este, una ventana donde se entregan los materiales de la carrera de Construcción.',
+            imageUrl: 'assets/img360/Piso -2/002-001.webp'
+        },
+        'sb-003': {
+            titulo:'Sala SB-003',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra en el piso -2. En la puerta hay un letrero con normas de seguridad, y a un costado, un extintor con su respectivo cartel. En la ventana, se indica que esta sala pertenece a la Escuela de Construcción.',
+            imageUrl: 'assets/img360/Piso -2/003.webp'
+        },
+        'sb-004': {
+            titulo:'Sala SB-004',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra en el piso -2. En la puerta hay un letrero con normas de seguridad. Frente a ella, hay una zona de estudio, y a un costado, un extintor.',
+            imageUrl: 'assets/img360/Piso -2/004.webp'
+        },
+        'sb-005': {
+            titulo:'Sala SB-005',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra en el piso -2. En la puerta hay un letrero con normas de seguridad. Bajo este se encuentra un extintor.',
+            imageUrl: 'assets/img360/Piso -2/004.webp'
+        },
+        'sb-006': {
+            titulo:'Sala SB-006',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra en el piso -2. En la puerta hay un letrero con normas de seguridad. A un costado, se puede ver un extintor con su señalética y un chaleco debajo de este. En la pared, hay puntos de reciclaje. El lugar está cerca de los ascensores y de una zona de estudio.',
+            imageUrl: 'assets/img360/Piso -2/006.webp'
+        },
+        'sb-007': {
+            titulo:'Sala SB-007',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra en el piso -2. En la pared, junto a la ventana, hay una indicación que señala que pertenece a la Escuela de Turismo. Además, el área está equipada con señalética de emergencia y otros elementos que identifican su función.',
+            imageUrl: 'assets/img360/Piso -2/007.webp'
+        },
+        'pañol electricidad': {
+            titulo:'Pañol Electricidad',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra en el piso -2. En la puerta, hay un letrero amarillo que dice: "Área restringida". A un costado, se encuentra la bodega de Turismo. En la ventana, se indica que pertenece a la Escuela de Electricidad.',
+            imageUrl: 'assets/img360/Piso -2/0017-A-0017-B-0018-2.webp'
+        },
+        'sb-0010': {
+            titulo:'Sala SB-0010',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra en el piso -2. En la puerta se encuentra un letrero verde de seguridad, .', //FALTA DESCRIPCIÓN
+            imageUrl: 'assets/img360/Piso -2/0017-A-0017-B-0018-4.webp'
+        },
+        'sb-0018': {
+            titulo:'Sala SB-0018',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra en el piso -2. En la puerta, hay un letrero verde de seguridad acompañado de otros letreros. Fuera de la sala, se encuentra una mesa junto a un ventilador.', 
+            imageUrl: 'assets/img360/Piso -2/0017-A-0017-B-0018.webp'
+        },
+        'sb-0011': {
+            titulo:'Sala SB-0011',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra en el piso -2. En la puerta, hay un letrero verde de seguridad. Al costado, se encuentra un extintor acompañado de un letrero rojo. Fuera de la sala, hay una mesa.', 
+            imageUrl: 'assets/img360/Piso -2/0017-A-0017-B.webp'
+        },
+        'sb-0017a': {
+            titulo:'Sala SB-0017A',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra en el piso -2. En la puerta, hay un letrero verde de seguridad. Frente a la puerta, se encuentra un extintor junto a su cartel. En la ventana, se puede apreciar un letrero que dice: "Laboratorio de PLC y Laboratorios Industriales".', 
+            imageUrl: 'assets/img360/Piso -2/0017-A.webp'
+        },
+        'sb-0017b': {
+            titulo:'Sala SB-0017B',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra en el piso -2. En la puerta, hay un letrero verde de seguridad, junto a otro letrero que dice: "Prohibido ingresar alimentos". Frente a la puerta, se encuentra un extintor acompañado de su cartel de seguridad.', 
+            imageUrl: 'assets/img360/Piso -2/0017-A-0017-B.webp'
+        },
+        'sb-012': {
+            titulo:'Sala SB-012',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra en el piso -2. En la puerta, hay un letrero verde de seguridad. En la ventana, se puede apreciar un sticker informativo que indica que la sala es de "Robótica".', 
+            imageUrl: 'assets/img360/Piso -2/0019-0.webp'
+        },
+        'sb-0014': { // Revisar bien las salas de este punto
+            titulo:'Sala SB-0014',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra en el piso -2. En la puerta, hay un letrero verde de seguridad. En la ventana frontal, se puede apreciar un sticker informativo que indica que la sala pertenece a "Técnico en Electricidad y Automatización Industrial".', 
+            imageUrl: 'assets/img360/Piso -2/0017-A-0017-B.webp'
+        },
+        'sb-0023': {
+            titulo:'Sala SB-0023',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra en el piso -2. En el costado, hay un punto con extintores acompañado de su cartel de seguridad. Al frente, se encuentra un punto de descanso, donde se puede apreciar un letrero que refleja el nombre de la "Escuela de Ingeniería y Recursos Naturales".', 
+            imageUrl: 'assets/img360/Piso -2/0019-0023-1.webp'
+        },
+        'sb-0022b': {
+            titulo:'Sala SB-0022B',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra en el piso -2. En el costado, hay un cartel verde que indica la vía de evacuación. Al frente, se encuentra una zona de descanso.', 
+            imageUrl: 'assets/img360/Piso -2/0019-0023-0022-B.webp'
+        },
+        'sb-0019': {
+            titulo:'Sala SB-0019',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra en el piso -2. En la puerta, hay un letrero verde de seguridad. En la ventana frontal, se puede apreciar un sticker informativo que indica que la sala pertenece a la Escuela de Ingeniería y Recursos Naturales. Al frente, se encuentran casilleros y, cerca, una zona de descanso.', 
+            imageUrl: 'assets/img360/Piso -2/0019.webp'
+        },
+        'sb-0020': {
+            titulo:'Sala SB-0020',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra en el piso -2. En la puerta, hay un letrero verde de seguridad. En la ventana frontal, se puede apreciar un sticker informativo que indica que la sala pertenece a la Escuela de Ingeniería y Recursos Naturales. Al frente, se encuentran casilleros y, cerca, una zona de descanso.', 
+            imageUrl: 'assets/img360/Piso -2/0019.webp'
+        },
         'centro tecnológico automotriz': {
             titulo:'Centro Tecnológico Automotriz',
             tituloCard: '¿Cómo Llegar?',
             descripcion: 'Su ubicación está al costado de la zona de ejercicio. En el techo, se puede apreciar que en un lado hay un letrero de color verde de salida. Se puede observar que en la ventana se tiene el cartel que dice: "INFORMÁTICA Y TELECOMUNICACIONES".',
             imageUrl: 'assets/img360/Piso -2/mecanica-1.webp'
+        },
+        //Piso 1
+        'capilla': {
+            titulo:'Capilla',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra ubicado en el primer piso, a un costado de la entrada. A un lado, está el baño de Administración, y frente a este se encuentra una escalera.',
+            imageUrl: 'assets/img360/Piso 1/capilla.webp',
+            mostrarBoton: true
+        },
+        'citt': {
+            titulo:'CITT',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra ubicado en el primer piso, frente a los ascensores. Frente a la puerta de acceso, se encuentra la entrada a la capilla.',
+            imageUrl: 'assets/img360/Piso 1/citt.webp',
+            mostrarBoton: true
+        },
+        'punto estudiantil': {
+            titulo:'Punto Estudiantil',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra ubicado en el primer piso, a un costado de la puerta de entrada. Frente a la puerta de acceso, se pueden encontrar vitrinas con trofeos en ellas. A un costado, se encuentra una escalera.',
+            imageUrl: 'assets/img360/Piso 1/punto estudiantil.webp',
+            mostrarBoton: true
+        },
+        'biblioteca': {
+            titulo:'Biblioteca',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra ubicado en el primer piso. Frente, se pueden encontrar lugares de descanso. A un costado de estos, se encuentra una máquina dispensadora de bebidas.',
+            imageUrl: 'assets/img360/Piso 1/biblioteca.webp',
+            mostrarBoton: true
+        },
+        'casino': {
+            titulo:'Casino',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra ubicado en el primer piso. frente al acceso se encuentra el patio central y un lugar para comer fuera, al costado se encuentra un kiosco de comida vegana.',
+            imageUrl: 'assets/img360/Piso 1/casino.webp',
+            mostrarBoton: true
+        },
+        'coordinación docente': {
+            titulo:'Coordinación Docente',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra ubicado en el primer piso. Se encuentra casi a un costado de la puerta que da hacia la salida al patio central. En la pared a un costado, se puede encontrar un punto de reciclaje.',
+            imageUrl: 'assets/img360/Piso 1/coordinacion-docente.webp',
+            mostrarBoton: true
+        },
+        //Piso 2
+        'lc-08': {
+            titulo:'LC-08',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra ubicado en el segundo piso. A un costado de la puerta de entrada se encuentra un punto de reciclaje y una zona donde se pueden utilizar computadores. En el techo, se encuentra un letrero con la información del piso.',
+            imageUrl: 'assets/img360/Piso 2/lc-08.webp'
+        },
+        'lc-09': {
+            titulo:'LC-09',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra ubicado en el segundo piso. Se encuentra frente a los ascensores. En la pared, a un costado de la puerta de acceso, se encuentran distintos puntos de reciclaje. Seguido, se encuentra una zona de descanso.',
+            imageUrl: 'assets/img360/Piso 2/lc-09.webp'
+        },
+        'lc-10': {
+            titulo:'LC-10',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra ubicado en el segundo piso. En la pared junto a la entrada, se encuentra un basurero. En el costado, en la pared, se encuentra un letrero un poco mas allá se encuentra un extintor.',
+            imageUrl: 'assets/img360/Piso 2/lc-10.webp'
+        },
+        'lc-11': {
+            titulo:'LC-11',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra ubicado en el segundo piso. A un lado de la entrada, se puede apreciar un letrero. En la pared, se encuentra un cartel informativo de la sede. De igual forma, se encuentra frente a la escalera y una zona de descanso.',
+            imageUrl: 'assets/img360/Piso 2/lc-11.webp'
+        },
+        'lc-12': {
+            titulo:'LC-12',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra ubicado en el segundo piso. Frente, se encuentra una escalera y la zona de descanso. En la pared, se pueden apreciar distintos carteles.',
+            imageUrl: 'assets/img360/Piso 2/lc-12.webp'
+        },
+        'lc-13': {
+            titulo:'LC-13',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra ubicado en el segundo piso. En la pared, a un costado, se encuentra un letrero. En la pared, se encuentra un letrero de "Red Inerte".',
+            imageUrl: 'assets/img360/Piso 2/lc-13.webp'
+        },
+        'lc-14': {
+            titulo:'LC-14',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra ubicado en el segundo piso. En el costado, junto a la puerta, se pueden encontrar letreros de energía, y más al costado, un extintor. De igual forma, se encuentra acasi llegando al kiosco. En las paredes, hay un letrero de "Vía de evacuación" junto a otros letreros.',
+            imageUrl: 'assets/img360/Piso 2/lc-14.webp'
+        },
+        'lc-15': {
+            titulo:'LC-15',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra ubicado en el segundo piso. Está frente al kiosco y las mesas del mismo. En la pared, al costado de la puerta, se encuentra un letrero.',
+            imageUrl: 'assets/img360/Piso 2/lc-15.webp'
+        },
+        'lc-16': {
+            titulo:'LC-16',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra ubicado en el segundo piso. En el costado, a un lado de la puerta, se puede apreciar una palanca contra incendios. Está casi llegando a la escalera. En el costado, en la pared, se puede encontrar un extintor junto a unos letreros.',
+            imageUrl: 'assets/img360/Piso 2/lc-16.webp'
+        },
+        'sala portafolio': {
+            titulo:'Sala De Portafolio',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra ubicado en el segundo piso. En un costado, se encuentra un ascensor. En el techo, se puede ver un letrero con la información del piso.',
+            imageUrl: 'assets/img360/Piso 2/sala de portafolio.webp',
+            mostrarBoton: true
+        },
+        'sp-07': {
+            titulo:'SP-07',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra ubicado en el segundo piso. En las paredes, se encuentra un panel de información, al igual que un basurero.',
+            imageUrl: 'assets/img360/Piso 2/sp-07.webp'
+        },
+        'sp-08': {
+            titulo:'SP-08',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra ubicado en el segundo piso. En el costado de la puerta, se encuentra un extintor junto a un cartel que lo señala. De igual forma, arriba de este, se encuentra un parlante.',
+            imageUrl: 'assets/img360/Piso 2/sp-08.webp'
+        },
+        'sp-09': {
+            titulo:'SP-09',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra ubicado en el segundo piso. En el costado, a un lado de la puerta, se puede ver un letrero con información junto con un letrero verde de "salida de emergencia" de igual forma en el echo se puede apreciar un letrero con la info.',
+            imageUrl: 'assets/img360/Piso 2/sp-09.webp'
+        },
+        'sp-10': {
+            titulo:'SP-10',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra ubicado en el segundo piso. En un costado, se puede apreciar un basurero. En el techo, se encuentra una cámara de seguridad junto con internet.',
+            imageUrl: 'assets/img360/Piso 2/sp-10.webp'
+        },
+        'sp-11': {
+            titulo:'SP-11',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra ubicado en el segundo piso. A un costado, al lado de la puerta, se encuentran extintores junto a un desfibrilador "D.E.A.".',
+            imageUrl: 'assets/img360/Piso 2/sp-11.webp'
+        },
+        //Piso 3
+        'sp-1': {
+            titulo:'SP-1',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra ubicado en el tercer piso, .',
+            imageUrl: 'assets/img360/Piso 3/sp-1.webp'
+        },
+        'sp-2': {
+            titulo:'SP-2',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra ubicado en el tercer piso, donde, en el costado, hay un panel de anuncios junto a un letrero verde de emergencia. Además, en el techo se puede observar un letrero que indica las salas',
+            imageUrl: 'assets/img360/Piso 3/sp-2.webp'
+        },
+        'sp-3': {
+            titulo:'SP-3',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Se encuentra ubicado en el tercer piso. Al costado, junto a la puerta, hay un extintor con su respectivo letrero, y en la pared se encuentra un basurero. Además, en el techo, se puede observar un cartel cercano que indica las salas.',
+            imageUrl: 'assets/img360/Piso 3/sp-3.webp'
+        },
+        'sp-4': {
+            titulo:'SP-4',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Está ubicado en el tercer piso, donde, al costado, se encuentra un panel de anuncios acompañado de un cartel de emergencias de color verde.',
+            imageUrl: 'assets/img360/Piso 3/sp-4.webp'
+        },
+        'sp-5': {
+            titulo:'SP-5',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Está ubicado en el tercer piso, en la pared lateral, donde hay un basurero de color negro.',
+            imageUrl: 'assets/img360/Piso 3/sp-5.webp'
+        },
+        'sp-6': {
+            titulo:'SP-6',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Está ubicado en el tercer piso. En el costado, se encuentran extintores junto a sus letreros de emergencia, y cerca del techo hay un cartel que indica las salas. Además, en el costado, hay un sillón para descansar.',
+            imageUrl: 'assets/img360/Piso 3/sp-6.webp'
+        },
+        'lc-01': {
+            titulo:'LC-01',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Está ubicado en el tercer piso. En los costados de la pared, se encuentran dos puntos de reciclaje junto a un extintor con su respectivo cartel.',
+            imageUrl: 'assets/img360/Piso 3/lc-01.webp'
+        },
+        'lc-02': {
+            titulo:'LC-02',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Está ubicado en el tercer piso. En la pared de un costado, se encuentran varios puntos de reciclaje, mientras que en el costado derecho hay un cartel de seguridad de color verde',
+            imageUrl: 'assets/img360/Piso 3/lc-02.webp'
+        },
+        'lc-03': {
+            titulo:'LC-03',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'Está ubicado en el tercer piso, a un costado de "Cetecom". En la pared, se encuentra un tablero de anuncios.',
+            imageUrl: 'assets/img360/Piso 3/lc-03.webp'
         },
         //Piso 4
         'sala 401': { 
@@ -241,22 +550,19 @@ export class roomsComponent{
             titulo:'Sala 501',
             tituloCard: '¿Cómo Llegar?',
             descripcion: 'La sala se encuentra a un costado del baño de mujeres. En la pared, junto a la puerta, hay un extintor y, debajo de él, un chaleco de seguridad. Fuera de la sala, en las paredes, hay puntos de reciclaje, y frente a la sala, en el pilar de la escalera, se encuentra un letrero de seguridad.',
-            imageUrl: 'assets/img360/Piso 5/501.webp',
-            mapUrl: 'https://tour.metareal.com/apps/player?asset=3d8b7462-3ce8-4407-ba80-830d82302060&position=133.96x1.76y-0.57z&rotation=3.39x183.51y0.00z',
+            imageUrl: 'assets/img360/Piso 5/501.webp'
         },
         'sala 502': {
             titulo:'Sala 502',
             tituloCard: '¿Cómo Llegar?',
             descripcion: 'La sala se encuentra frente a la zona de descanso. En la pared, junto a la puerta, hay un dispensador de agua. Fuera de la sala, en las paredes, hay puntos de reciclaje. En el techo, se encuentra un letrero del piso.',
-            imageUrl: 'assets/img360/Piso 5/502.webp',
-            mapUrl: 'https://tour.metareal.com/apps/player?asset=3d8b7462-3ce8-4407-ba80-830d82302060&position=118.99x1.74y-0.56z&rotation=0.39x166.36y0.00z'
+            imageUrl: 'assets/img360/Piso 5/502.webp'
         },
         'sala 503': {
             titulo:'Sala 503',
             tituloCard: '¿Cómo Llegar?',
             descripcion: 'La sala se encuentra frente a la zona de descanso. En la pared, junto a la puerta, hay un dispensador de agua. Fuera de la sala, en las paredes, hay puntos de reciclaje. En el techo, se encuentra un letrero del piso.',
-            imageUrl: 'assets/img360/Piso 5/503.webp',
-            mapUrl: 'https://tour.metareal.com/apps/player?asset=3d8b7462-3ce8-4407-ba80-830d82302060&position=108.34x1.80y-0.63z&rotation=-4.81x166.01y0.00z'
+            imageUrl: 'assets/img360/Piso 5/503.webp'
         },
         'sala 504': {
             titulo:'Sala 504',
@@ -381,8 +687,8 @@ export class roomsComponent{
         
     }
 
-    constructor(private route: ActivatedRoute) {} 
-
+    constructor(private route: ActivatedRoute ) {} 
+    
     ngOnInit() { 
         this.salaId = this.route.snapshot.paramMap.get('id'); 
         const InfoSala = this.InfoSala[this.salaId.toLowerCase()]; 
@@ -391,9 +697,9 @@ export class roomsComponent{
         this.descripcion = InfoSala.descripcion; 
         this.imageUrl = InfoSala.imageUrl;
         this.mapUrl = InfoSala.mapUrl;
-        this.loadPanorama();
+        this.mostrarBoton = InfoSala.mostrarBoton;
+        this.loadPanorama(); 
     }
- 
     loadPanorama() {
         pannellum.viewer('panorama', {
             type: 'equirectangular',

@@ -8,7 +8,6 @@
         <ion-list>
             <ion-item color="orange-duoc" href="calendario" class="lateral-menu"><ion-icon name="calendar-number-outline" class="icon-lateral"></ion-icon>Calendario</ion-item>
             <ion-item color="orange-duoc" href="escuelas-carrera" class="lateral-menu"><ion-icon name="school-outline" class="icon-lateral"></ion-icon>Consejero</ion-item>
-            <ion-item color="orange-duoc" href="Sala" class="lateral-menu"><ion-icon name="construct-outline" class="icon-lateral"></ion-icon>Ajustes</ion-item>
         </ion-list>
     </ion-content>  
 </ion-menu>
@@ -22,21 +21,38 @@
     </ion-toolbar>
 </ion-header>
   
-<ion-content >
+<ion-content>
     <ion-slides [options]="option" class="ion-margin-top style-slide">
-
         <ion-slide class="imgSlide">
             <ion-img
-            src="/assets/mapaPisos/Piso-1.png"
-            alt="Mapa Piso 1"
+            src="/assets/mapaPisos/Piso-1.webp"
+            alt="Mapa Piso -1"
             style="cursor: pointer;"
-            (click)="redirect()"
+
             >
             </ion-img>
         </ion-slide>
         <ion-slide class="imgSlide">
             <ion-img
-            src="/assets/mapaPisos/Piso2.png"
+            src="/assets/mapaPisos/Piso-2.webp"
+            alt="Mapa Piso -2"
+            style="cursor: pointer;"
+
+            >
+            </ion-img>
+        </ion-slide>
+        <ion-slide class="imgSlide">
+            <ion-img
+            src="/assets/mapaPisos/Piso1.webp"
+            alt="Mapa Piso 1"
+            style="cursor: pointer;"
+
+            >
+            </ion-img>
+        </ion-slide>
+        <ion-slide class="imgSlide">
+            <ion-img
+            src="/assets/mapaPisos/Piso2.webp"
             alt="Mapa Piso 2"
             style="cursor: pointer;"
             [routerLink]="['/mapa/piso2']"
@@ -45,17 +61,44 @@
         </ion-slide>
         <ion-slide class="imgSlide">
             <ion-img
-            src="/assets/mapaPisos/Piso3.png"
+            src="/assets/mapaPisos/Piso3.webp"
             alt="Mapa Piso 3"
             style="cursor: pointer;"
             [routerLink]="['/mapa/piso3']"
             >
             </ion-img>
         </ion-slide>
+        <ion-slide class="imgSlide">
+            <ion-img
+            src="/assets/mapaPisos/Piso4.webp"
+            alt="Mapa Piso 4"
+            style="cursor: pointer;"
+
+            >
+            </ion-img>
+        </ion-slide>
+        <ion-slide class="imgSlide">
+            <ion-img
+            src="/assets/mapaPisos/Piso5.webp"
+            alt="Mapa Piso 5"
+            style="cursor: pointer;"
+            [routerLink]="['/mapa/piso5']"
+            >
+            </ion-img>
+        </ion-slide>
+        <ion-slide class="imgSlide">
+            <ion-img
+            src="/assets/mapaPisos/Piso6.webp"
+            alt="Mapa Piso 5"
+            style="cursor: pointer;"
+            [routerLink]="['/mapa/piso6']"
+            >
+            </ion-img>
+        </ion-slide>
     </ion-slides>
 
-        <ion-row class="ion-align-items-center ion-margin-top">
-            
+    <ion-row class="ion-align-items-center ion-margin-top">
+
             <ion-col size="10" offset="1">
                 <ion-button
                     href="Sala"
@@ -75,7 +118,7 @@
                     expand="block"
 
                 >
-                    Puntos de Interes
+                    Puntos de Interés
                 </ion-button>
             </ion-col>
 
@@ -90,7 +133,7 @@
                     Preguntas Frecuentes
                 </ion-button>
             </ion-col>
-        </ion-row>               
+        </ion-row>        
 </ion-content>
 
 <ion-footer>
@@ -110,5 +153,8 @@
                 </div>
             </div>
         </div>
+        <div class="footer-creators">
+            Creado por: Miguel Navarrete, Sebastián González, Nicolás Zúñiga, Felipe Cornejo
+        </div>
     </div>
-</ion-footer>
+</ion-footer> 

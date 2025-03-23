@@ -1,20 +1,5 @@
-ion-toolbar{
-    height: 100px;
-}
-
-.boton-menu-grande {
-    margin-top: 21px;
-    width: 76px;
-    height: 54px;
-}
-
-.title-header{
-    font-size: 52px; 
-    margin-top: 23px;
-}
-
-.iconConf{
-    font-size: 67px;
+ion-button{
+    font-size: 19px;
 }
 
 .Escuelas{
@@ -22,14 +7,15 @@ ion-toolbar{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    height: 250px;
+    height: 150px;
+    margin-top: 131px;
 }
 
 .Escuela{
     display: flex;
     flex-direction: row;
-    width: 700px;
     height: 100px;
+    width: 700px;
     align-items: center;
 }
 
@@ -48,6 +34,7 @@ a{
     text-align: center;
     color: black;
     font-weight: bold;
+    font-size: xx-large;
 }
 
 .AdministracionNegocios{
@@ -103,3 +90,19 @@ a{
     border-radius: 15px;
     height: 100px;
 }
+
+.title-header{
+    font-size: 52px; 
+    margin-top: 23px;
+}
+
+.iconConf{
+    font-size: 67px;
+}
+
+.boton-menu-grande {
+    margin-top: 21px;
+    width: 76px;
+    height: 54px;
+}
+

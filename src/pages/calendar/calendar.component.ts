@@ -1,42 +1,53 @@
-import { Component} from '@angular/core'; 
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataService } from 'src/app/data.service';  // Importa el servicio de datos
 
 @Component({
   selector: 'calendar',
   templateUrl: 'calendar.component.html',
   styleUrls: ['calendar.component.css'],
 })
+export class CalendarComponent {
+  events: any[] = [];  // Lista de eventos
+  descripcionParaMostrar: string = '';  // Pregunta para mostrar según el evento
 
-export class CalendarComponent{
-  events: { id: number, titulo: string; descripcion: string }[] = [
-    {
-      id: 1,
-      titulo: '✍️✨ ¡Participa en el concurso de microficción "Short Stories"! 🌟🖋️',
-      descripcion: '¿Te apasiona la escritura y quieres poner a prueba tu creatividad en inglés? ¡Esta es tu oportunidad!'
-    },
-  
-    {
-      id:2,
-      titulo: '⚽ ¡Vive el deporte! Becas deportivas 2° Semestre 2024 🏅',
-      descripcion: '¿Quieres vivir el deporte?'
-    },
+  constructor(private router: Router, private dataService: DataService) {}
 
-    {
-      id:3,
-      titulo: '¡Participa en el concurso para nombrar a nuestra nueva mascota! 🦅 ¡Te invitamos a ser parte!',
-      descripcion: '¡Te invitamos a ser parte del emocionante proceso para darle nombre a nuestra nueva mascota! 🦅'
-    },
-
-    {
-      id:4,
-      titulo: '¡Cerramos el mes de la Ciberseguridad en Duoc UC! 🛡️💻',
-      descripcion: 'Durante octubre vivimos la Ciberseguridad en Duoc UC y queremos agradecer a toda la comunidad por su participación y compromiso. '
-    }
-  ];
-
-  constructor(private router: Router ) {}
+  ngOnInit() {
+    this.dataService.getEventos().subscribe((response) => {
+      this.events = response;  // Almacena los eventos recuperados desde la base de datos
+      // Después de cargar los datos, asignamos la pregunta para cada evento (puedes adaptarlo si es necesario)
+      if (this.events.length > 0) {
+        this.asignarPregunta(this.events[0]);  // Llamamos la asignación para el primer evento si existe
+      }
+    });
+  }
 
   verDetalle(id: number) {
-    this.router.navigate(['/evento', id]);
-  } 
+    // Busca el evento por ID
+    const event = this.events.find(e => e.id === id);
+
+    if (event) {
+      // Asigna la pregunta según el título del evento
+      this.asignarPregunta(event);  // Llama a la función de asignación de pregunta
+      // Navega al detalle del evento pasando el ID
+      this.router.navigate(['/evento', id]);
+    }
+  }
+
+  asignarPregunta(event: any) {
+    if (event) {
+      if (event.titulo.toLowerCase().includes('pastoral')) {
+        this.descripcionParaMostrar = "¿Te gustaría formar parte de esta comunidad de fe y esperanza?";
+      } else if (event.titulo.toLowerCase().includes('becas')) {
+        this.descripcionParaMostrar = "¿Estás listo para vivir el deporte y aprovechar esta oportunidad?";
+      } else if (event.titulo.toLowerCase().includes('deporte')) {
+        this.descripcionParaMostrar = "¿Quieres unirte a las becas deportivas y ser parte de esta experiencia?";
+      } else if (event.titulo.toLowerCase().includes('concurso')) {
+        this.descripcionParaMostrar = "¿Te animas a participar en este concurso?";
+      } else {
+        this.descripcionParaMostrar = "¿Estás listo para ser parte de este evento?";
+      }
+    }
+  }
 }

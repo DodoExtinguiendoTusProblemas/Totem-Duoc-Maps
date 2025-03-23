@@ -3,7 +3,7 @@ ion-card-title{
 }
 
 p{
-    font-size: large;    
+    font-size: x-large;    
 }
 
 ion-grid{
@@ -14,7 +14,6 @@ ion-grid{
 }
 
 ion-card-content{
-    font-size: x-large;
     display: flex;
     flex-direction: column;
     justify-content: center;  
