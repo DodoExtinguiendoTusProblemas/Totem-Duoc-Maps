@@ -148,7 +148,7 @@ export class roomsComponent{
             imageUrl: 'assets/img360/Piso -1/Sala Informatica.webp',
             mostrarBoton: true
         },
-        //Piso -2 FALTA ESTEEEEE
+        //Piso -2 FALTAN IMAGENES DE ESTE
         'sb-001': {
             titulo:'Sala SB-001',
             tituloCard: '¿Cómo Llegar?',
@@ -233,7 +233,7 @@ export class roomsComponent{
             descripcion: 'Se encuentra en el piso -2. En la puerta, hay un letrero verde de seguridad. En la ventana, se puede apreciar un sticker informativo que indica que la sala es de "Robótica".', 
             imageUrl: 'assets/img360/Piso -2/0019-0.webp'
         },
-        'sb-0014': { // Revisar bien las salas de este punto
+        'sb-0014': {
             titulo:'Sala SB-0014',
             tituloCard: '¿Cómo Llegar?',
             descripcion: 'Se encuentra en el piso -2. En la puerta, hay un letrero verde de seguridad. En la ventana frontal, se puede apreciar un sticker informativo que indica que la sala pertenece a "Técnico en Electricidad y Automatización Industrial".', 
@@ -268,6 +268,48 @@ export class roomsComponent{
             tituloCard: '¿Cómo Llegar?',
             descripcion: 'Su ubicación está al costado de la zona de ejercicio. En el techo, se puede apreciar que en un lado hay un letrero de color verde de salida. Se puede observar que en la ventana se tiene el cartel que dice: "INFORMÁTICA Y TELECOMUNICACIONES".',
             imageUrl: 'assets/img360/Piso -2/mecanica-1.webp'
+        },
+        'pañol de construcción': {
+            titulo:'Centro Tecnológico Automotriz',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'se ubica en el piso -2 y se ubica al costado de la sala sb-002',
+            imageUrl: 'Imagen momentaneamente no disponible' 
+        },
+        'sala de auxiliares': {
+            titulo:'Centro Tecnológico Automotriz',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'se ubica en el piso -2 y se encuentra al frente de la sala de primeros auxilios y se puede llegar directo desde la escalera al costado derecho de la entrada de la sede',
+            imageUrl: 'Imagen momentaneamente no disponible' 
+        },
+        'salas primeros auxilios': {
+            titulo:'Centro Tecnológico Automotriz',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'se ubica en el piso -2 y se puede llegar bajando por uno de los lados de la escalera que está al costado de la entrada de la sede',
+            imageUrl: 'Imagen momentaneamente no disponible' 
+        },
+        'bodega de turismo': {
+            titulo:'Centro Tecnológico Automotriz',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'se encuentra al lado de la sala de primeros auxilios',
+            imageUrl: 'Imagen momentaneamente no disponible' //AGREGAR LAS IMAGENES COMO SE INDICA EN EL INSTRUCTIVO
+        },
+        'sector mecánica': {
+            titulo:'Centro Tecnológico Automotriz',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'es un sector grande que se ubica en el piso -2 a la parte del fondo, también se puede llegar por las bajadas que se ubican en el patio de la sede',
+            imageUrl: 'Imagen momentaneamente no disponible' //AGREGAR LAS IMAGENES COMO SE INDICA EN EL INSTRUCTIVO
+        },
+        'sb-0013': {
+            titulo:'Centro Tecnológico Automotriz',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'se encuentra al lado de la sala 0012 y enfrente del pasillo y escalera',
+            imageUrl: 'Imagen momentaneamente no disponible' //AGREGAR LAS IMAGENES COMO SE INDICA EN EL INSTRUCTIVO
+        },
+        'sb-0021': {
+            titulo:'Centro Tecnológico Automotriz',
+            tituloCard: '¿Cómo Llegar?',
+            descripcion: 'se encuentra en el piso -2 y al costado de esta sala hay una salida grande hacia una via de autos que da al estacionamiento',
+            imageUrl: 'Imagen momentaneamente no disponible' //AGREGAR LAS IMAGENES COMO SE INDICA EN EL INSTRUCTIVO
         },
         //Piso 1
         'capilla': {
@@ -404,7 +446,7 @@ export class roomsComponent{
             descripcion: 'Se encuentra ubicado en el segundo piso. A un costado, al lado de la puerta, se encuentran extintores junto a un desfibrilador "D.E.A.".',
             imageUrl: 'assets/img360/Piso 2/sp-11.webp'
         },
-        //Piso 3
+        //Piso 3 FALTAN 7 SALAS LAS CUALES AÑADIR
         'sp-1': {
             titulo:'SP-1',
             tituloCard: '¿Cómo Llegar?',
